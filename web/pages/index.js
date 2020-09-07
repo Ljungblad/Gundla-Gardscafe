@@ -1,10 +1,5 @@
-// index.js
-const Index = () => {
-  return (
-    <div>
-      <p>Hello world!</p>
-    </div>
-  );
-};
+import Layout from '../components/layout';
+
+const Index = () => <Layout></Layout>;
 
 export default Index;
