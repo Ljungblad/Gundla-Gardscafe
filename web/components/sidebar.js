@@ -10,7 +10,6 @@ const StyledSideBar = styled.div`
   top: 0px;
   right: 0;
   overflow: hidden;
-  z-index: 0;
   transition: 0.4s;
 `;
 
