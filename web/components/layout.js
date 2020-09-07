@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Nav from '../components/nav';
+import styled from 'styled-components';
 
 const Layout = (props) => (
   <main>
@@ -10,6 +12,7 @@ const Layout = (props) => (
         key='title'
       />
     </Head>
+    <Nav></Nav>
   </main>
 );
 
