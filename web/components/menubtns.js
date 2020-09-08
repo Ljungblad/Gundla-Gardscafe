@@ -4,6 +4,7 @@ import MenuBtn from '../components/menubtn';
 const StyledMenuBtns = styled.div`
   display: flex;
   justify-content: center;
+  border: 1px solid black;
 `;
 
 const MenuBtns = () => {
@@ -22,6 +23,7 @@ const MenuBtns = () => {
             text={i}
             onClick={() => handleMenuBtnClick(i)}
             isActive={activeButton === i}
+            key={i}
           />
         );
       })}
