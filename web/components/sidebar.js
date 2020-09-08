@@ -1,22 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledSideBar = styled.div`
   height: 100vh;
-  width: ${(props) => (props.hidden === "hidden" ? "100px" : "0px")};
+  width: ${({ open }) => (open ? '100px' : '0px')};
   background: hotpink;
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 0;
+  top: 0px;
   right: 0;
   overflow: hidden;
+  transition: 0.4s;
 `;
 
 const SideBar = (props) => {
-  console.log(props.hidden);
-
   return (
-    <StyledSideBar>
+    <StyledSideBar open={props.open}>
       <a>Logo</a>
       <a>Home</a>
       <a>Menu</a>

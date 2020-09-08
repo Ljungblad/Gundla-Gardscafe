@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import SideBar from "../components/sidebar";
+import styled from 'styled-components';
+import Burger from '../components/hamburger';
 
 const StyledNav = styled.nav`
-  height: 50px;
+  height: 61px;
   background: grey;
   display: flex;
   justify-content: space-between;
@@ -12,19 +12,10 @@ const StyledNav = styled.nav`
 `;
 
 const Nav = () => {
-  const [isHidden, setIsHidden] = React.useState("");
-
-  const toggleHideMenu = () => {
-    const updatedMenu = isHidden === "hidden" ? "" : "hidden";
-    setIsHidden(updatedMenu);
-  };
-
   return (
     <StyledNav>
       <a>Logo</a>
-      <a>Map</a>
-      <a onClick={toggleHideMenu}>Menu</a>
-      <SideBar hidden={isHidden}></SideBar>
+      <Burger />
     </StyledNav>
   );
 };
