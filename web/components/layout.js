@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Nav from "../components/nav";
 import styled from "styled-components";
+import MenuBtns from '../components/menubtns';
 import InstagramFeed from "../components/instagramfeed";
 
 const Layout = (props) => (
@@ -14,6 +15,7 @@ const Layout = (props) => (
       />
     </Head>
     <Nav></Nav>
+  <MenuBtns />
     <InstagramFeed instagramData={props.instagramData} />
   </main>
 );
