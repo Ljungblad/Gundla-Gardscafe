@@ -14,13 +14,16 @@ const StyledSideBar = styled.div`
 `;
 
 const SideBar = (props) => {
+  const navigationLinks = props.props;
+  console.log(navigationLinks);
+
   return (
     <StyledSideBar open={props.open}>
-      <a>Logo</a>
-      <a>Home</a>
-      <a>Menu</a>
-      <a>About</a>
-      <a>Cantact</a>
+      {navigationLinks.map((item, i) => (
+        <a href='#' key={i}>
+          {navigationLinks[i].title}
+        </a>
+      ))}
     </StyledSideBar>
   );
 };

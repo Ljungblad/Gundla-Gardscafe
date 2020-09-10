@@ -29,8 +29,9 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = ({props}) => {
   const [open, setOpen] = React.useState(false);
+  console.log(props);
 
   return (
     <div>
@@ -39,7 +40,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <SideBar open={open}></SideBar>
+      <SideBar props={props}open={open}></SideBar>
     </div>
   );
 };

@@ -11,11 +11,13 @@ const StyledNav = styled.nav`
   position: relative;
 `;
 
-const Nav = () => {
+const Nav = (props) => {
+  const navigationLinks = props.props.navigation;
+
   return (
     <StyledNav>
       <a>Logo</a>
-      <Burger />
+      <Burger props={navigationLinks} />
     </StyledNav>
   );
 };
