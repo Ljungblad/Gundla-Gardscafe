@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link'
 
 const StyledSideBar = styled.div`
   height: 100vh;
@@ -14,13 +15,15 @@ const StyledSideBar = styled.div`
 `;
 
 const SideBar = (props) => {
+  const navigationLinks = props.navigationLinks;
+
   return (
     <StyledSideBar open={props.open}>
-      <a>Logo</a>
-      <a>Home</a>
-      <a>Menu</a>
-      <a>About</a>
-      <a>Cantact</a>
+      {navigationLinks.map((item, i) => (
+        <a href='#' key={i}>
+          {item.title}
+        </a>
+      ))}
     </StyledSideBar>
   );
 };
