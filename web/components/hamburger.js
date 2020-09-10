@@ -29,9 +29,8 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = ({props}) => {
+const Burger = (props) => {
   const [open, setOpen] = React.useState(false);
-  console.log(props);
 
   return (
     <div>
@@ -40,7 +39,7 @@ const Burger = ({props}) => {
         <div />
         <div />
       </StyledBurger>
-      <SideBar props={props}open={open}></SideBar>
+      <SideBar navigationLinks={props.navigationLinks} open={open}></SideBar>
     </div>
   );
 };

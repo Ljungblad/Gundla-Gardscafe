@@ -5,8 +5,8 @@ import InstagramFeed from '../components/instagramfeed';
 
 const Index = (props) => {
   return (
-    <Layout props={props}>
-      <InstagramFeed instagramData={props.props.instagram} />
+    <Layout navigationLinks={props.navigationLinks.navigation}>
+      <InstagramFeed instagramData={props.instagram} />
     </Layout>
   );
 };
@@ -15,20 +15,16 @@ const query = groq`{
     "navigation": (*[_type == 'navigation']),
   }`;
 
-Index.getInitialProps = async function () {
+export async function getStaticProps(context) {
   const res = await client.fetch(query);
-
   const resInsta = await fetch(
     'https://www.instagram.com/gundlacafeinsta/?__a=1'
   );
   const InstagramJson = await resInsta.json();
 
   return {
-    props: {
-      instagram: InstagramJson,
-      navigation: res,
-    },
+    props: { instagram: InstagramJson, navigationLinks: res }, // will be passed to the page component as props
   };
-};
+}
 
 export default Index;

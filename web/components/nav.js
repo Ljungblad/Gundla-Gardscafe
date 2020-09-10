@@ -12,12 +12,10 @@ const StyledNav = styled.nav`
 `;
 
 const Nav = (props) => {
-  const navigationLinks = props.props.navigation;
-
   return (
     <StyledNav>
       <a>Logo</a>
-      <Burger props={navigationLinks} />
+      <Burger navigationLinks={props.navigationLinks} />
     </StyledNav>
   );
 };
