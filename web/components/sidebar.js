@@ -39,12 +39,12 @@ const SideBar = (props) => {
 
   return (
     <StyledSideBar open={props.open}>
-      <h1 className="sideBarLogo">LOGO</h1>
+      <h1 className='sideBarLogo'>LOGO</h1>
       <div className='navigationLinks'>
         {navigationLinks.map((item, i) => (
-          <a href='#' key={i}>
-            {item.title}
-          </a>
+          <Link href={item.link || '#'} key={i}>
+            <a>{item.title}</a>
+          </Link>
         ))}
       </div>
     </StyledSideBar>
