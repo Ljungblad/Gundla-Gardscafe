@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Nav from '../components/nav';
 import MenuBtns from '../components/menubtns';
+import Footer from '../components/footer';
 
 const Layout = (props) => {
   return (
@@ -12,6 +13,7 @@ const Layout = (props) => {
       <Nav navigationLinks={props.navigationLinks} />
       <MenuBtns />
       {props.children}
+      <Footer />
     </main>
   );
 };
