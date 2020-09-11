@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
 const Nav = (props) => {
   return (
     <StyledNav>
-      <a>Logo</a>
+      <a href='/'>Logo</a>
       <Burger navigationLinks={props.navigationLinks} />
     </StyledNav>
   );
