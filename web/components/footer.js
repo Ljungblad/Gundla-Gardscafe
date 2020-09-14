@@ -46,6 +46,8 @@ const StyledFooter = styled.footer`
 const Footer = (props) => {
   const currentYear = new Date().getFullYear();
   const footerData = props.footerData[0];
+
+  // TEXT CONTENT FROM SANITY
   const openingHoursTitle =
     footerData.textBlockOpeningHours[0].children[0].text;
   const weekDayTitle = footerData.textBlockOpeningHours[1].children[0].text;

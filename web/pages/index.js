@@ -11,6 +11,7 @@ const Index = (props) => {
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <InstagramFeed instagramData={props.instagram} />
     </Layout>
+    
   );
 };
 
