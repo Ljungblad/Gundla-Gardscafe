@@ -4,9 +4,8 @@ import Layout from '../components/layout';
 import InstagramFeed from '../components/instagramfeed';
 
 const Index = (props) => {
-  console.log(props.navigation.navigationLinks.navigation);
   return (
-    <Layout navigationLinks={props.navigation.navigationLinks.navigation}>
+    <Layout navigationLinks={props.globalProps.navigation}>
       <InstagramFeed instagramData={props.instagram} />
     </Layout>
   );
