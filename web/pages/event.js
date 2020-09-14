@@ -4,27 +4,47 @@ import groq from 'groq';
 import client from '../client';
 import urlBuild from '../imageBuilder';
 import Image from '../components/image';
+import LinkedTextSection from '../components/linkedTextSection';
 
 const Event = (props) => {
+  console.log(props);
+
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
-  const eventData = props.eventData.event[0];
+  const eventPageData = props.eventData.event[0];
+  const events = props.eventData.addEvents;
+  console.log(events);
   const pageDesc = props.eventData.event[0].textBlockEvent[0].children[0].text;
-  const firstImageUrl = urlBuild(eventData.firstImage.asset._ref);
+  const firstImageUrl = urlBuild(eventPageData.firstImage.asset._ref);
 
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader
-        title={eventData.titleEvent || 'Page title'}
+        title={eventPageData.titleEvent || 'Page title'}
         text={pageDesc || 'Page description'}
       />
       <Image url={firstImageUrl} alt='e' />
+
+      {events.map((event, i) => {
+        const title = event.eventTitle;
+        const email = event.email;
+        const eventInfo = event.textBlockHero[0].children[0].text;
+        return (
+          <LinkedTextSection
+            key={i}
+            title={title}
+            text={eventInfo}
+            link={`mailto:${email}`}
+          />
+        );
+      })}
     </Layout>
   );
 };
 
 const query = groq`{
-    "event": (*[_type == 'event']),
+    "event": *[_type == 'event'],
+    "addEvents": *[_type == 'addEvents'],
   }`;
 
 export async function getStaticProps(context) {

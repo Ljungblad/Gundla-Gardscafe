@@ -14,7 +14,6 @@ const CafePage = (props) => {
   const footerData = props.globalProps.footer;
 
   //TEXT
-  
   const pageTitle = props.content.cafe[0]._type;
   const headerTextBlock =
     props.content.cafe[0].textBlockHero[0].children[0].text;
