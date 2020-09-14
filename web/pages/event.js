@@ -7,13 +7,10 @@ import Image from '../components/image';
 import LinkedTextSection from '../components/linkedTextSection';
 
 const Event = (props) => {
-  console.log(props);
-
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
   const eventPageData = props.eventData.event[0];
   const events = props.eventData.addEvents;
-  console.log(events);
   const pageDesc = props.eventData.event[0].textBlockEvent[0].children[0].text;
   const firstImageUrl = urlBuild(eventPageData.firstImage.asset._ref);
 
@@ -29,6 +26,7 @@ const Event = (props) => {
         const title = event.eventTitle;
         const email = event.email;
         const eventInfo = event.textBlockHero[0].children[0].text;
+
         return (
           <LinkedTextSection
             key={i}

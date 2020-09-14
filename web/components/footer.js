@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
   padding: 40px 20px 40px 20px;
 
   .footerOpeningHours {
-    h1 {
+    h3 {
       margin-bottom: 10px;
     }
   }
@@ -18,7 +18,7 @@ const StyledFooter = styled.footer`
   .openingHoursWeekDay,
   .openingHoursWeekend {
     display: flex;
-    width: 50%;
+    width: 170px;
     justify-content: space-between;
   }
 
