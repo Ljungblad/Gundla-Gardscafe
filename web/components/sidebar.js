@@ -42,9 +42,9 @@ const SideBar = (props) => {
       <h1 className='sideBarLogo'>LOGO</h1>
       <div className='navigationLinks'>
         {navigationLinks.map((item, i) => (
-          <Link href={item.link || '#'} key={i}>
-            <a>{item.title}</a>
-          </Link>
+          <a href={item.link} key={i}>
+            {item.title}
+          </a>
         ))}
       </div>
     </StyledSideBar>
