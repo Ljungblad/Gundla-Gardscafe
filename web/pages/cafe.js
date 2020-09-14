@@ -10,9 +10,12 @@ import Image from "../components/image";
 const CafePage = (props) => {
   console.log(props.content.cafe[0]);
 
+  //GLOBAL PROPS
+  const navigationData = props.globalProps.navigation;
+  const footerData = props.globalProps.footer;
+
   //TEXT
-  const navigationLinks = props.navigation.navigationLinks.navigation;
-  const pageTitle = props.content.cafe[0]._type;
+  const pageTitle = props.content.cafe[0].titleCafe;
   const headerTextBlock =
     props.content.cafe[0].textBlockHero[0].children[0].text;
   const menuTitle = props.content.cafe[0].titleMenu;
@@ -32,7 +35,7 @@ const CafePage = (props) => {
   const fourthAltText = props.content.cafe[0].fourthImage.alt;
 
   return (
-    <Layout navigationLinks={navigationLinks}>
+    <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader
         title={pageTitle || "Titel"}
         text={headerTextBlock || "Text"}
