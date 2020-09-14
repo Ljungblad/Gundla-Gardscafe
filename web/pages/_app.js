@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps, props }) {
 
 const query = groq`{
     "navigation": (*[_type == 'navigation']),
+    "footer": (*[_type])
   }`;
 
 MyApp.getInitialProps = async () => {

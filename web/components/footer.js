@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
   background: grey;
   color: white;
   padding: 40px 20px 40px 20px;
@@ -37,9 +37,9 @@ const StyledFooter = styled.div`
   }
 
   .footerBottomSection {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -49,7 +49,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <div className='footerOpeningHours'>
-        <h1>Öppettider</h1>
+        <h3>Öppettider</h3>
         <div className='openingHoursWeekDay'>
           <p>Vardagar</p>
           <p>10 - 17</p>
@@ -60,17 +60,17 @@ const Footer = () => {
         </div>
       </div>
       <div className='footerAdress'>
-        <h1>Adress</h1>
+        <h3>Adress</h3>
         <p>Gundla Mosse 32</p>
       </div>
       <div className='footerContactUs'>
-        <h1>Kontakta oss</h1>
+        <h3>Kontakta oss</h3>
         <p>gundla@gmail.com</p>
         <p>071 234 56 78</p>
       </div>
-      <div className="footerBottomSection">
+      <div className='footerBottomSection'>
         <div className='footerLogo'>
-          <h1>LOGO</h1>
+          <h3>LOGO</h3>
         </div>
         <div className='footerLinks'>
           <a>Facebook</a>
