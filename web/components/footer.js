@@ -43,8 +43,10 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Footer = () => {
+const Footer = (props) => {
   const currentYear = new Date().getFullYear();
+  const footerData = props.footerData[0];
+  console.log(footerData);
 
   return (
     <StyledFooter>

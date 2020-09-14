@@ -13,7 +13,7 @@ const Layout = (props) => {
       <Nav navigationLinks={props.navigationLinks} />
       <MenuBtns />
       {props.children}
-      <Footer />
+      <Footer footerData={props.footerData} />
     </main>
   );
 };

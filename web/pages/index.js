@@ -4,8 +4,11 @@ import Layout from '../components/layout';
 import InstagramFeed from '../components/instagramfeed';
 
 const Index = (props) => {
+  const navigationData = props.globalProps.navigation;
+  const footerData = props.globalProps.footer;
+
   return (
-    <Layout navigationLinks={props.globalProps.navigation}>
+    <Layout navigationLinks={navigationData} footerData={footerData}>
       <InstagramFeed instagramData={props.instagram} />
     </Layout>
   );
@@ -13,7 +16,7 @@ const Index = (props) => {
 
 export async function getStaticProps(context) {
   const resInsta = await fetch(
-    'https://www.instagram.com/gundlacafeinsta/?__a=1'
+    'https://www.instagram.com/gundlagardscafe/?__a=1'
   );
   const InstagramJson = await resInsta.json();
 
