@@ -47,40 +47,42 @@ const Footer = (props) => {
   const currentYear = new Date().getFullYear();
   const footerData = props.footerData[0];
   console.log(footerData);
+  console.log(footerData.textBlockOpeningHours[0].children[0].text);
 
   return (
     <StyledFooter>
       <div className='footerOpeningHours'>
-        <h3>Öppettider</h3>
+        <h3>{footerData.textBlockOpeningHours[0].children[0].text}</h3>
         <div className='openingHoursWeekDay'>
-          <p>Vardagar</p>
-          <p>10 - 17</p>
+          <p>{footerData.textBlockOpeningHours[1].children[0].text}</p>
+          <p>{footerData.textBlockOpeningHours[2].children[0].text}</p>
         </div>
         <div className='openingHoursWeekend'>
-          <p>Helger</p>
-          <p>11 - 15</p>
+          <p>{footerData.textBlockOpeningHours[3].children[0].text}</p>
+          <p>{footerData.textBlockOpeningHours[4].children[0].text}</p>
         </div>
       </div>
       <div className='footerAdress'>
-        <h3>Adress</h3>
-        <p>Gundla Mosse 32</p>
+        <h3>{footerData.textBlockAddress[0].children[0].text}</h3>
+        <p>{footerData.textBlockAddress[1].children[0].text}</p>
       </div>
       <div className='footerContactUs'>
-        <h3>Kontakta oss</h3>
-        <p>gundla@gmail.com</p>
-        <p>071 234 56 78</p>
+        <h3>{footerData.textBlockContact[0].children[0].text}</h3>
+        <p>{footerData.email}</p>
       </div>
       <div className='footerBottomSection'>
         <div className='footerLogo'>
           <h3>LOGO</h3>
         </div>
         <div className='footerLinks'>
-          <a>Facebook</a>
-          <a>Instagram</a>
-          <a>Mail</a>
+          <a href={footerData.facebookUrl}>Facebook</a>
+          <a href={footerData.instagramkUrl}>Instagram</a>
+          <a href={`mailto:${footerData.email}`}>Mail</a>
         </div>
         <div className='footerCopyRight'>
-          <p>&copy; Gundla Gårdscafé {currentYear}</p>
+          <p>
+            {footerData.copyrightText} {currentYear}
+          </p>
         </div>
       </div>
     </StyledFooter>
