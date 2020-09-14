@@ -46,28 +46,35 @@ const StyledFooter = styled.footer`
 const Footer = (props) => {
   const currentYear = new Date().getFullYear();
   const footerData = props.footerData[0];
-  console.log(footerData);
-  console.log(footerData.textBlockOpeningHours[0].children[0].text);
+  const openingHoursTitle =
+    footerData.textBlockOpeningHours[0].children[0].text;
+  const weekDayTitle = footerData.textBlockOpeningHours[1].children[0].text;
+  const weekendTitle = footerData.textBlockOpeningHours[3].children[0].text;
+  const weekDayHours = footerData.textBlockOpeningHours[2].children[0].text;
+  const weekendHours = footerData.textBlockOpeningHours[4].children[0].text;
+  const addressTitle = footerData.textBlockAddress[0].children[0].text;
+  const address = footerData.textBlockAddress[1].children[0].text;
+  const contactTitle = footerData.textBlockContact[0].children[0].text;
 
   return (
     <StyledFooter>
       <div className='footerOpeningHours'>
-        <h3>{footerData.textBlockOpeningHours[0].children[0].text}</h3>
+        <h3>{openingHoursTitle}</h3>
         <div className='openingHoursWeekDay'>
-          <p>{footerData.textBlockOpeningHours[1].children[0].text}</p>
-          <p>{footerData.textBlockOpeningHours[2].children[0].text}</p>
+          <p>{weekDayTitle}</p>
+          <p>{weekDayHours}</p>
         </div>
         <div className='openingHoursWeekend'>
-          <p>{footerData.textBlockOpeningHours[3].children[0].text}</p>
-          <p>{footerData.textBlockOpeningHours[4].children[0].text}</p>
+          <p>{weekendTitle}</p>
+          <p>{weekendHours}</p>
         </div>
       </div>
       <div className='footerAdress'>
-        <h3>{footerData.textBlockAddress[0].children[0].text}</h3>
-        <p>{footerData.textBlockAddress[1].children[0].text}</p>
+        <h3>{addressTitle}</h3>
+        <p>{address}</p>
       </div>
       <div className='footerContactUs'>
-        <h3>{footerData.textBlockContact[0].children[0].text}</h3>
+        <h3>{contactTitle}</h3>
         <p>{footerData.email}</p>
       </div>
       <div className='footerBottomSection'>
