@@ -1,21 +1,52 @@
 import groq from "groq";
 import client from "../client";
+import urlBuild from "../imageBuilder";
 import Layout from "../components/layout";
 import PageHeader from "../components/pageheader";
 import TextSection from "../components/textSection";
+import LinkedTextSection from "../components/linkedTextSection";
+import Image from "../components/image";
 
 const CafePage = (props) => {
-  console.log(props.content.cafe[0].textBlockMenu[0].children[0].text);
+  console.log(props.content.cafe[0]);
+
+  //TEXT
   const navigationLinks = props.navigation.navigationLinks.navigation;
   const pageTitle = props.content.cafe[0]._type;
   const headerTextBlock =
     props.content.cafe[0].textBlockHero[0].children[0].text;
   const menuTitle = props.content.cafe[0].titleMenu;
   const menuText = props.content.cafe[0].textBlockMenu[0].children[0].text;
+  const cateringText =
+    props.content.cafe[0].textBlockCatering[0].children[0].text;
+  const cateringTitle = props.content.cafe[0].titleCatering;
+
+  //IMAGES
+  const headerImg = urlBuild(props.content.cafe[0].firstImage.asset._ref);
+  const headerAltText = props.content.cafe[0].firstImage.alt;
+  const secondImg = urlBuild(props.content.cafe[0].secondImage.asset._ref);
+  const secondAltText = props.content.cafe[0].secondImage.alt;
+  const thirdImg = urlBuild(props.content.cafe[0].thirdImage.asset._ref);
+  const thirdAltText = props.content.cafe[0].thirdImage.alt;
+  const fourthImg = urlBuild(props.content.cafe[0].fourthImage.asset._ref);
+  const fourthAltText = props.content.cafe[0].fourthImage.alt;
+
   return (
     <Layout navigationLinks={navigationLinks}>
-      <PageHeader title={pageTitle} text={headerTextBlock} />
-      <TextSection title={menuTitle} text={menuText} />
+      <PageHeader
+        title={pageTitle || "Titel"}
+        text={headerTextBlock || "Text"}
+      />
+      <Image url={headerImg} alt={headerAltText} />
+      <TextSection title={menuTitle || "Titel"} text={menuText || "Text"} />
+      <Image url={secondImg} alt={secondAltText} />
+      <Image url={thirdImg} alt={thirdAltText} />
+      <Image url={fourthImg} alt={fourthAltText} />
+      <LinkedTextSection
+        title={cateringTitle || "Titel"}
+        text={cateringText || "Text"}
+        link="/catering"
+      />
     </Layout>
   );
 };
