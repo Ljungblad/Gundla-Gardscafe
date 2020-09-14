@@ -6,7 +6,7 @@ const StyledFooter = styled.footer`
   padding: 40px 20px 40px 20px;
 
   .footerOpeningHours {
-    h1 {
+    h3 {
       margin-bottom: 10px;
     }
   }
@@ -18,7 +18,7 @@ const StyledFooter = styled.footer`
   .openingHoursWeekDay,
   .openingHoursWeekend {
     display: flex;
-    width: 50%;
+    width: 170px;
     justify-content: space-between;
   }
 
@@ -46,6 +46,8 @@ const StyledFooter = styled.footer`
 const Footer = (props) => {
   const currentYear = new Date().getFullYear();
   const footerData = props.footerData[0];
+
+  // TEXT CONTENT FROM SANITY
   const openingHoursTitle =
     footerData.textBlockOpeningHours[0].children[0].text;
   const weekDayTitle = footerData.textBlockOpeningHours[1].children[0].text;

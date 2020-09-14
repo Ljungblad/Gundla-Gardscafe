@@ -39,7 +39,7 @@ const SideBar = (props) => {
 
   return (
     <StyledSideBar open={props.open}>
-      <h1 className='sideBarLogo'>LOGO</h1>
+      <h3 className='sideBarLogo'>LOGO</h3>
       <div className='navigationLinks'>
         {navigationLinks.map((item, i) => (
           <a href={item.link} key={i}>
