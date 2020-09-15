@@ -7,6 +7,21 @@ const StyledForm = styled.form`
   color: #fff;
   padding: 20px;
 
+  .formTopText {
+    padding: 50px 0px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+
+  input,
+  textarea,
+  .buttons,
+  .formTopText {
+    width: 335px;
+  }
+
   input {
     margin-bottom: 30px;
     height: 40px;
@@ -35,7 +50,7 @@ const StyledForm = styled.form`
   }
   .buttons {
     display: flex;
-    margin-top: 30px;
+    margin: 30px 0px 60px 0px;
     justify-content: space-between;
 
     button {
@@ -44,11 +59,11 @@ const StyledForm = styled.form`
       border: none;
       text-transform: uppercase;
     }
-  }
-  .buttons :nth-child(1) {
-    color: #fff;
-    background: #000;
-    border: 1px solid #fff;
+    .resetBtn {
+      color: #fff;
+      background: #000;
+      border: 1px solid #fff;
+    }
   }
 `;
 
@@ -56,6 +71,13 @@ const Form = ({ events }) => {
   console.log(events[0].eventTitle);
   return (
     <StyledForm action='https://formspree.io/xaylwjae' method='POST'>
+      <div className='formTopText'>
+        <h3>INTRESSEANMÄLAN</h3>
+        <p>
+          Här kan ni göra intresseanmälan till evenemangen som har begränsade
+          platset. Ni får ett mail som bekräftar om ni fått en plats.
+        </p>
+      </div>
       <label htmlFor='name'>Namn</label>
       <input type='text' name='name' />
       <label htmlFor='_replyto'>Mail</label>
@@ -72,7 +94,9 @@ const Form = ({ events }) => {
       <label>Meddelande</label>
       <textarea name='message'></textarea>
       <div className='buttons'>
-        <button type='button'>Återställ</button>
+        <button className='resetBtn' type='button'>
+          Återställ
+        </button>
         <button type='submit'>Skicka</button>
       </div>
     </StyledForm>
