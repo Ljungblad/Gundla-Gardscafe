@@ -67,7 +67,7 @@ const StyledForm = styled.form`
   }
 `;
 
-const Form = ({ events }) => {
+const EventForm = ({ events }) => {
   console.log(events[0].eventTitle);
   return (
     <StyledForm action='https://formspree.io/xaylwjae' method='POST'>
@@ -103,4 +103,4 @@ const Form = ({ events }) => {
   );
 };
 
-export default Form;
+export default EventForm;

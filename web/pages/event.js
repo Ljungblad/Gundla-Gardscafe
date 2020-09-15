@@ -5,17 +5,24 @@ import client from '../client';
 import urlBuild from '../imageBuilder';
 import Image from '../components/image';
 import TextSection from '../components/textSection';
-import Form from '../components/form';
+import EventForm from '../components/form';
 
 const Event = (props) => {
+  // GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
+
+  // PAGE DATA
   const eventPageData = props.eventData.event[0];
   const events = props.eventData.addEvents;
-  const pageDesc = props.eventData.event[0].textBlockEvent[0].children[0].text;
+
+  // IMAGES
   const firstImageUrl = urlBuild(eventPageData.firstImage.asset._ref);
   const secondImageUrl = urlBuild(eventPageData.secondImage.asset._ref);
+
+  // TEXT
   const bookText = eventPageData.textBlockBooking[0].children[0].text;
+  const pageDesc = props.eventData.event[0].textBlockEvent[0].children[0].text;
 
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
@@ -32,7 +39,7 @@ const Event = (props) => {
       })}
       <TextSection title={bookText} />
       <Image url={secondImageUrl} alt='e' />
-      <Form events={events}/>
+      <EventForm events={events} />
     </Layout>
   );
 };
