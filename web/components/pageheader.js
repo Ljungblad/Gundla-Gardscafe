@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledPageHeader = styled.div`
   width: 100vw;
   background-color: grey;
-  padding: 24px;
+  padding: 50px 24px;
 
   h1 {
     text-transform: uppercase;

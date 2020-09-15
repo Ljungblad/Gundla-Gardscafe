@@ -4,15 +4,25 @@ import groq from 'groq';
 import client from '../client';
 import urlBuild from '../imageBuilder';
 import Image from '../components/image';
-import LinkedTextSection from '../components/linkedTextSection';
+import TextSection from '../components/textSection';
+import EventForm from '../components/form';
 
 const Event = (props) => {
+  // GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
+
+  // PAGE DATA
   const eventPageData = props.eventData.event[0];
   const events = props.eventData.addEvents;
-  const pageDesc = props.eventData.event[0].textBlockEvent[0].children[0].text;
+
+  // IMAGES
   const firstImageUrl = urlBuild(eventPageData.firstImage.asset._ref);
+  const secondImageUrl = urlBuild(eventPageData.secondImage.asset._ref);
+
+  // TEXT
+  const bookText = eventPageData.textBlockBooking[0].children[0].text;
+  const pageDesc = props.eventData.event[0].textBlockEvent[0].children[0].text;
 
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
@@ -24,18 +34,12 @@ const Event = (props) => {
 
       {events.map((event, i) => {
         const title = event.eventTitle;
-        const email = event.email;
         const eventInfo = event.textBlockHero[0].children[0].text;
-
-        return (
-          <LinkedTextSection
-            key={i}
-            title={title}
-            text={eventInfo}
-            link={`mailto:${email}`}
-          />
-        );
+        return <TextSection key={i} title={title} text={eventInfo} />;
       })}
+      <TextSection title={bookText} />
+      <Image url={secondImageUrl} alt='e' />
+      <EventForm events={events} />
     </Layout>
   );
 };
