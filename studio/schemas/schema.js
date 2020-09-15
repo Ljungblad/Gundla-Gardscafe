@@ -9,7 +9,8 @@ import home from './home';
 import cafe from './cafe';
 import findUs from './findus';
 import catering from './catering';
-import event from './eventpage';
+import eventpage from './eventpage';
+import addevents from './addevents';
 import about from './about';
 import rent from './rent';
 import footer from './footer';
@@ -27,7 +28,8 @@ export default createSchema({
     cafe,
     findUs,
     catering,
-    event,
+    eventpage,
+    addevents,
     about,
     rent,
     footer,
