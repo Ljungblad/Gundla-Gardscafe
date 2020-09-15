@@ -9,7 +9,7 @@ import home from './home';
 import cafe from './cafe';
 import findUs from './findus';
 import catering from './catering';
-import event from './event';
+import event from './eventpage';
 import about from './about';
 import rent from './rent';
 import footer from './footer';
