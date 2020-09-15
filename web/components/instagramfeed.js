@@ -22,8 +22,10 @@ const StyledImage = styled.div`
 `;
 
 const InstagramFeed = (props) => {
-  const url =
-    props.instagramData.graphql.user.edge_owner_to_timeline_media.edges;
+  const url = props.instagramData.graphql.user.edge_owner_to_timeline_media.edges.slice(
+    0,
+    6
+  );
 
   return (
     <StyledImage>
