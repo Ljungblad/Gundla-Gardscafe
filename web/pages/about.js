@@ -16,26 +16,24 @@ const About = (props) => {
   const firstImage = urlBuild(aboutPageData.firstImage.asset._ref);
   const secondImage = urlBuild(aboutPageData.secondImage.asset._ref);
 
-  console.log(aboutPageData);
-
   //TEXTS
-  const pageDesc = aboutPageData.textBlockAbout[0].children[0].text;
-  const backgroundText = aboutPageData.textBlockBackground[0].children[0].text;
-  const welcomeText = aboutPageData.textBlockWelcome[0].children[0].text;
-  const eventText = aboutPageData.textBlockEvent[0].children[0].text;
   const pageTitle = aboutPageData.titleAbout;
-  const titleBackground = aboutPageData.titleBackground;
-  const titleEvent = aboutPageData.titleEvent;
-  const titleWelcome = aboutPageData.titleWelcome;
+  const pageDesc = aboutPageData.textBlockAbout[0].children[0].text;
+  const backgroundTitle = aboutPageData.titleBackground;
+  const backgroundText = aboutPageData.textBlockBackground[0].children[0].text;
+  const eventTitle = aboutPageData.titleEvent;
+  const eventText = aboutPageData.textBlockEvent[0].children[0].text;
+  const welcomeTitle = aboutPageData.titleWelcome;
+  const welcomeText = aboutPageData.textBlockWelcome[0].children[0].text;
 
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageDesc} />
       <Image url={firstImage} alt='e' />
-      <TextSection title={titleBackground} text={backgroundText} />
+      <TextSection title={backgroundTitle} text={backgroundText} />
       <Image url={secondImage} alt='e' />
-      <LinkedTextSection title={titleEvent} text={eventText} />
-      <TextSection title={titleWelcome} text={welcomeText} />
+      <LinkedTextSection title={eventTitle} text={eventText} />
+      <TextSection title={welcomeTitle} text={welcomeText} />
     </Layout>
   );
 };
