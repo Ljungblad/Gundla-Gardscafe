@@ -68,9 +68,6 @@ const StyledForm = styled.form`
 `;
 
 const EventForm = ({ events, eventPageData }) => {
-  console.log(events[0].eventTitle);
-  console.log(eventPageData);
-
   const formTitle = eventPageData.titleForm;
   const formInfo = eventPageData.textBlockForm[0].children[0].text;
 

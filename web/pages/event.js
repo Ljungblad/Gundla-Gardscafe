@@ -39,7 +39,7 @@ const Event = (props) => {
       })}
       <TextSection title={bookText} />
       <Image url={secondImageUrl} alt='e' />
-      <EventForm events={events} eventPageData={eventPageData}/>
+      <EventForm events={events} eventPageData={eventPageData} />
     </Layout>
   );
 };
