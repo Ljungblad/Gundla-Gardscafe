@@ -15,7 +15,7 @@ const Index = (props) => {
   );
 };
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const resInsta = await fetch(
     "https://www.instagram.com/gundlagardscafe/?__a=1"
   );

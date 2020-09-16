@@ -8,6 +8,7 @@ import PageHeader from '../components/pageheader';
 import urlBuild from '../imageBuilder';
 
 const About = (props) => {
+  // GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
   const aboutPageData = props.aboutData.about[0];
@@ -43,7 +44,7 @@ const query = groq`{
     
   }`;
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const res = await client.fetch(query);
 
   return {
