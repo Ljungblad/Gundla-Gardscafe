@@ -9,7 +9,6 @@ import TextSection from "../components/textSection";
 import LinkedTextSection from "../components/linkedTextSection";
 
 const Index = (props) => {
-  console.log(props.content);
   //GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
@@ -45,25 +44,43 @@ const Index = (props) => {
       <Image url={imageHero} alt={heroAltText} />
       <TextSection title="" text={headerTextBlock} />
       <Image url={secondImg} alt={secondAltText} />
-      <LinkedTextSection title={titleCafe} text={cafeTextBlock} link="/cafe" />
+      <LinkedTextSection
+        title={titleCafe}
+        text={cafeTextBlock}
+        link="/cafe"
+        linkType="text"
+        color="white"
+      />
       <Image url={thirdImg} alt={thirdAltText} />
       <LinkedTextSection
         title={titleFind}
         text={findTextBlock}
         link="/findus"
+        linkType="text"
+        color="white"
       />
       <LinkedTextSection
         title={titleCatering}
         text={cateringTextBlock}
         link="/catering"
+        linkType="arrow"
+        color="black"
       />
       <Image url={fourthImg} alt={fourthAltText} />
       <LinkedTextSection
         title={titleEvent}
         text={eventTextBlock}
         link="/event"
+        linkType="text"
+        color="white"
       />
-      <LinkedTextSection title={titleRent} text={rentTextBlock} link="/rent" />
+      <LinkedTextSection
+        title={titleRent}
+        text={rentTextBlock}
+        link="/rent"
+        linkType="arrow"
+        color="black"
+      />
       <InstagramFeed instagramData={props.instagram} />
     </Layout>
   );
