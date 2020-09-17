@@ -3,7 +3,7 @@ import client from "../client";
 import urlBuild from "../imageBuilder";
 import Layout from "../components/layout";
 import InstagramFeed from "../components/instagramfeed";
-import PageHeader from "../components/pageheader";
+import PageHeader from "../components/pageHeader";
 import Image from "../components/image";
 import TextSection from "../components/textSection";
 import LinkedTextSection from "../components/linkedTextSection";

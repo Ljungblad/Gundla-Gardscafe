@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledImage = styled.div`
-  width: 100vw;
+  
 
   h3 {
     margin: 45px 0 10px 20px;

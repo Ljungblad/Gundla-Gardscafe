@@ -5,6 +5,7 @@ import client from '../client';
 import urlBuild from '../imageBuilder';
 import Image from '../components/image';
 import TextSection from '../components/textSection';
+import LinkedTextSection from '../components/linkedTextSection';
 import EventForm from '../components/form';
 
 const Event = (props) => {
@@ -38,7 +39,7 @@ const Event = (props) => {
         const eventInfo = event.textBlockHero[0].children[0].text;
         return <TextSection key={i} title={title} text={eventInfo} />;
       })}
-      <TextSection title={bookText} />
+      <LinkedTextSection title={bookText} linkType='arrow' />
       <Image url={secondImageUrl} alt={secondImageAlt} />
       <EventForm events={events} eventPageData={eventPageData} />
     </Layout>

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledPageHeader = styled.div`
-  width: 100vw;
   padding: 30px 24px 50px 24px;
 
   h1 {

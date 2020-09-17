@@ -2,9 +2,8 @@ import Layout from '../components/layout';
 import groq from 'groq';
 import client from '../client';
 import TextSection from '../components/textSection';
-import LinkedTextSection from '../components/linkedTextSection';
 import Image from '../components/image';
-import PageHeader from '../components/pageheader';
+import PageHeader from '../components/pageHeader';
 import urlBuild from '../imageBuilder';
 
 const About = (props) => {
@@ -35,7 +34,7 @@ const About = (props) => {
       <Image url={firstImage} alt={firstImageAlt} />
       <TextSection title={backgroundTitle} text={backgroundText} />
       <Image url={secondImage} alt={secondImageAlt} />
-      <LinkedTextSection title={eventTitle} text={eventText} />
+      <TextSection title={eventTitle} text={eventText} />
       <TextSection title={welcomeTitle} text={welcomeText} />
     </Layout>
   );
