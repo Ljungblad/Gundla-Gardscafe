@@ -13,14 +13,35 @@ const Rent = (props) => {
   const rentPageData = props.rentData.rent[0];
   console.log(rentPageData);
 
+  // TEXT
+  const rentTitle = rentPageData.titleRent;
+  const cateringTitle = rentPageData.titleCatering;
+  const requestTitle = rentPageData.titleRequest;
+  const cateringText = rentPageData.textBlockCatering[0].children[0].text;
+  const rentText = rentPageData.textBlockRent[0].children[0].text;
+  const requestText = rentPageData.textBlockRequest[0].children[0].text;
+
   // IMAGES
-  const firstImage = props.rentData.firstImage;
-  const secondImage = props.rentData.secondImage;
-  const thirdImage = props.rentData.thirdImage;
-  const fourthImage = props.rentData.fourthImage;
+  const firstImage = urlBuild(rentPageData.firstImage.asset._ref);
+  const secondImage = urlBuild(rentPageData.secondImage.asset._ref);
+  const thirdImage = urlBuild(rentPageData.thirdImage.asset._ref);
+  const fourthImage = urlBuild(rentPageData.fourthImage.asset._ref);
 
   return (
-    <Layout navigationLinks={navigationData} footerData={footerData}></Layout>
+    <Layout navigationLinks={navigationData} footerData={footerData}>
+      <PageHeader title={rentTitle} text={rentText} />
+      <Image url={firstImage} alt='d' />
+      <TextSection title={requestTitle} text={requestText} />
+      <Image url={secondImage} alt='d' />
+      <Image url={thirdImage} alt='d' />
+      <Image url={fourthImage} alt='d' />
+      <LinkedTextSection
+        title={cateringTitle}
+        text={cateringText}
+        link='/catering}'
+        linkType='arrow'
+      />
+    </Layout>
   );
 };
 
