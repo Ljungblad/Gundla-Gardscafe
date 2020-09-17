@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import MenuBtn from '../components/menubtn';
+import styled from "styled-components";
+import MenuBtn from "../components/menubtn";
 
 const StyledMenuBtns = styled.div`
   display: flex;
@@ -8,7 +8,22 @@ const StyledMenuBtns = styled.div`
 
 const MenuBtns = () => {
   const [activeButton, setActiveButton] = React.useState(false);
-  const menuBtnsId = ['CAFÉMENY', 'ÖPPETTIDER', 'HITTA HIT'];
+  // const menuBtnsId = ["CAFÉ", "ÖPPETTIDER", "HITTA HIT"];
+
+  const menuBtns = [
+    {
+      title: "CAFÉ",
+      link: "/cafe",
+    },
+    {
+      title: "ÖPPETTIDER",
+      link: "#openingHours",
+    },
+    {
+      title: "HITTA HIT",
+      link: "/findus",
+    },
+  ];
 
   const handleMenuBtnClick = (id) => {
     setActiveButton(id);
@@ -16,12 +31,13 @@ const MenuBtns = () => {
 
   return (
     <StyledMenuBtns>
-      {menuBtnsId.map((i) => {
+      {menuBtns.map((btn, i) => {
         return (
           <MenuBtn
-            text={i}
-            onClick={() => handleMenuBtnClick(i)}
-            isActive={activeButton === i}
+            text={btn.title}
+            onClick={() => handleMenuBtnClick(btn.title)}
+            isActive={activeButton === btn.title}
+            link={btn.link}
             key={i}
           />
         );
