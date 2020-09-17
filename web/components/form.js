@@ -67,16 +67,15 @@ const StyledForm = styled.form`
   }
 `;
 
-const EventForm = ({ events }) => {
-  console.log(events[0].eventTitle);
+const EventForm = ({ events, eventPageData }) => {
+  const formTitle = eventPageData.titleForm;
+  const formInfo = eventPageData.textBlockForm[0].children[0].text;
+
   return (
     <StyledForm action='https://formspree.io/xaylwjae' method='POST'>
       <div className='formTopText'>
-        <h3>INTRESSEANMÄLAN</h3>
-        <p>
-          Här kan ni göra intresseanmälan till evenemangen som har begränsade
-          platset. Ni får ett mail som bekräftar om ni fått en plats.
-        </p>
+        <h3>{formTitle}</h3>
+        <p>{formInfo}</p>
       </div>
       <label htmlFor='name'>Namn</label>
       <input type='text' name='name' />

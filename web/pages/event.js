@@ -31,7 +31,6 @@ const Event = (props) => {
         text={pageDesc || 'Page description'}
       />
       <Image url={firstImageUrl} alt='e' />
-
       {events.map((event, i) => {
         const title = event.eventTitle;
         const eventInfo = event.textBlockHero[0].children[0].text;
@@ -39,7 +38,7 @@ const Event = (props) => {
       })}
       <TextSection title={bookText} />
       <Image url={secondImageUrl} alt='e' />
-      <EventForm events={events} />
+      <EventForm events={events} eventPageData={eventPageData} />
     </Layout>
   );
 };
@@ -49,7 +48,7 @@ const query = groq`{
     "addEvents": *[_type == 'addEvents'],
   }`;
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const res = await client.fetch(query);
 
   return {
