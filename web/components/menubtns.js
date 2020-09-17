@@ -3,12 +3,12 @@ import MenuBtn from '../components/menubtn';
 
 const StyledMenuBtns = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 const MenuBtns = () => {
   const [activeButton, setActiveButton] = React.useState(false);
-  const menuBtnsId = ['CAFÉMENY', 'ÖPPETTIDER', 'HITTA HIT'];
+  const menuBtnsId = ['CAFÉ', 'ÖPPETTIDER', 'HITTA HIT'];
 
   const handleMenuBtnClick = (id) => {
     setActiveButton(id);
