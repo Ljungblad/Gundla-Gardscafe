@@ -18,7 +18,9 @@ const Event = (props) => {
 
   // IMAGES
   const firstImageUrl = urlBuild(eventPageData.firstImage.asset._ref);
+  const firstImageAlt = eventPageData.firstImage.alt;
   const secondImageUrl = urlBuild(eventPageData.secondImage.asset._ref);
+  const secondImageAlt = eventPageData.secondImage.alt;
 
   // TEXT
   const bookText = eventPageData.textBlockBooking[0].children[0].text;
@@ -30,14 +32,14 @@ const Event = (props) => {
         title={eventPageData.titleEvent || 'Page title'}
         text={pageDesc || 'Page description'}
       />
-      <Image url={firstImageUrl} alt='e' />
+      <Image url={firstImageUrl} alt={secondImageAlt} />
       {events.map((event, i) => {
         const title = event.eventTitle;
         const eventInfo = event.textBlockHero[0].children[0].text;
         return <TextSection key={i} title={title} text={eventInfo} />;
       })}
       <TextSection title={bookText} />
-      <Image url={secondImageUrl} alt='e' />
+      <Image url={secondImageUrl} alt={secondImageAlt} />
       <EventForm events={events} eventPageData={eventPageData} />
     </Layout>
   );

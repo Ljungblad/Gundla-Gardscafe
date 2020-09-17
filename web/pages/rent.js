@@ -23,18 +23,22 @@ const Rent = (props) => {
 
   // IMAGES
   const firstImage = urlBuild(rentPageData.firstImage.asset._ref);
+  const firstImageAlt = rentPageData.firstImage.alt;
   const secondImage = urlBuild(rentPageData.secondImage.asset._ref);
+  const secondImageAlt = rentPageData.secondImage.alt;
   const thirdImage = urlBuild(rentPageData.thirdImage.asset._ref);
+  const thirdImageAlt = urlBuild(rentPageData.thirdImage.alt);
   const fourthImage = urlBuild(rentPageData.fourthImage.asset._ref);
+  const fourthImageAlt = rentPageData.fourthImage.asset.alt;
 
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={rentTitle} text={rentText} />
-      <Image url={firstImage} alt='d' />
+      <Image url={firstImage} alt={firstImageAlt} />
       <TextSection title={requestTitle} text={requestText} />
-      <Image url={secondImage} alt='d' />
-      <Image url={thirdImage} alt='d' />
-      <Image url={fourthImage} alt='d' />
+      <Image url={secondImage} alt={secondImageAlt} />
+      <Image url={thirdImage} alt={thirdImageAlt} />
+      <Image url={fourthImage} alt={fourthImageAlt} />
       <LinkedTextSection
         title={cateringTitle}
         text={cateringText}

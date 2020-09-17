@@ -13,7 +13,7 @@ const StyledImage = styled.div`
 const Image = (props) => {
   return (
     <StyledImage>
-      <img src={props.url} alt={props.alt} loading='lazy' />
+      <img src={props.url} alt={props.alt || 'image'} loading='lazy' />
     </StyledImage>
   );
 };

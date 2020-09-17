@@ -16,6 +16,8 @@ const About = (props) => {
   //IMAGES
   const firstImage = urlBuild(aboutPageData.firstImage.asset._ref);
   const secondImage = urlBuild(aboutPageData.secondImage.asset._ref);
+  const firstImageAlt = aboutPageData.firstImage.alt;
+  const secondImageAlt = aboutPageData.secondImage.alt;
 
   //TEXTS
   const pageTitle = aboutPageData.titleAbout;
@@ -30,9 +32,9 @@ const About = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageDesc} />
-      <Image url={firstImage} alt='e' />
+      <Image url={firstImage} alt={firstImageAlt} />
       <TextSection title={backgroundTitle} text={backgroundText} />
-      <Image url={secondImage} alt='e' />
+      <Image url={secondImage} alt={secondImageAlt} />
       <LinkedTextSection title={eventTitle} text={eventText} />
       <TextSection title={welcomeTitle} text={welcomeText} />
     </Layout>
