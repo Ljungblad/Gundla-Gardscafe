@@ -3,12 +3,13 @@ import Burger from '../components/hamburger';
 
 const StyledNav = styled.nav`
   height: 61px;
+  width: 100%;
   background: grey;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px 0 20px;
-  position: relative;
+  position: fixed;
 `;
 
 const Nav = (props) => {
