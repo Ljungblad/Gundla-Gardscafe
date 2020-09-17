@@ -117,6 +117,21 @@ export default {
       ],
     },
     {
+      name: "headerEvent",
+      type: "string",
+      title: "Rubrik Evenemang",
+    },
+    {
+      name: "textBlockEvent",
+      type: "array",
+      title: "Kort text till Evenemang",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
       name: "headerRent",
       type: "string",
       title: "Rubrik Abonnera",
