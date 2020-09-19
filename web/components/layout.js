@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Nav from '../components/nav';
-import MenuBtns from '../components/menubtns';
-import Footer from '../components/footer';
+import Head from "next/head";
+import Nav from "../components/nav";
+import MenuBtns from "../components/menubtns";
+import Footer from "../components/footer";
 
 
 const Layout = (props) => {
@@ -9,7 +9,7 @@ const Layout = (props) => {
     <main>
       <Head>
         <title>Gundla</title>
-        <meta property='og:title' content='Gundla Gårdscafé' key='title' />
+        <meta property="og:title" content="Gundla Gårdscafé" key="title" />
       </Head>
       <Nav navigationLinks={props.navigationLinks} />
       <MenuBtns />

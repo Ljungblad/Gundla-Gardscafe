@@ -49,6 +49,8 @@ const CafePage = (props) => {
         title={cateringTitle || "Titel"}
         text={cateringText || "Text"}
         link="/catering"
+        color="black"
+        linkType="arrow"
       />
     </Layout>
   );

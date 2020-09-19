@@ -6,9 +6,10 @@ import PageHeader from "../components/pageHeader";
 import Image from "../components/image";
 import TextSection from "../components/textSection";
 import Map from "../components/map";
+import SingleTextSection from "../components/singletextsection";
 
 const FindUsPage = (props) => {
-  console.log(props.content.findUs[0].textBlockParking[0]);
+  console.log(props.content.findUs[0]);
 
   //GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
@@ -26,7 +27,7 @@ const FindUsPage = (props) => {
   const parkingTitle = props.content.findUs[0].titleParking;
   const parkingText =
     props.content.findUs[0].textBlockParking[0].children[0].text;
-  const welcomeTitle = props.content.findUs[0].titlePublicTransport;
+  const welcomeTitle = props.content.findUs[0].titleWelcome;
 
   //IMAGES
   const headerImg = urlBuild(props.content.findUs[0].imageHero.asset._ref);
@@ -43,6 +44,7 @@ const FindUsPage = (props) => {
       <TextSection title={bikeTitle} text={bikeText} />
       <TextSection title={parkingTitle} text={parkingText} />
       <Map />
+      <SingleTextSection title={welcomeTitle} />
     </Layout>
   );
 };

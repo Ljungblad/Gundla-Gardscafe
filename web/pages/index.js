@@ -7,6 +7,7 @@ import PageHeader from "../components/pageHeader";
 import Image from "../components/image";
 import TextSection from "../components/textSection";
 import LinkedTextSection from "../components/linkedTextSection";
+import SingleTextSection from "../components/singletextsection";
 
 const Index = (props) => {
   //GLOBAL PROPS
@@ -42,7 +43,7 @@ const Index = (props) => {
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageSlogan} />
       <Image url={imageHero} alt={heroAltText} />
-      <TextSection title="" text={headerTextBlock} />
+      <SingleTextSection title="" text={headerTextBlock} />
       <Image url={secondImg} alt={secondAltText} />
       <LinkedTextSection
         title={titleCafe}

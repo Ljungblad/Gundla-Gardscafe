@@ -40,7 +40,13 @@ const CateringPage = (props) => {
       <Image url={secondImg} alt={secondAltText} />
       <Image url={thirdImg} alt={thirdAltText} />
       <Image url={fourthImg} alt={fourthAltText} />
-      <LinkedTextSection title={titleRent} text={rentTextBlock} link="/rent" />
+      <LinkedTextSection
+        title={titleRent}
+        text={rentTextBlock}
+        link="/rent"
+        color="black"
+        linkType="arrow"
+      />
     </Layout>
   );
 };
