@@ -1,9 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledPageHeader = styled.div`
-  width: 100vw;
-  background-color: grey;
-  padding: 50px 24px;
+  padding: 30px 24px 50px 24px;
 
   h1 {
     text-transform: uppercase;

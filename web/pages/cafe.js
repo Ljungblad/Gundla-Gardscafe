@@ -2,7 +2,7 @@ import groq from "groq";
 import client from "../client";
 import urlBuild from "../imageBuilder";
 import Layout from "../components/layout";
-import PageHeader from "../components/pageheader";
+import PageHeader from "../components/pageHeader";
 import TextSection from "../components/textSection";
 import LinkedTextSection from "../components/linkedTextSection";
 import Image from "../components/image";

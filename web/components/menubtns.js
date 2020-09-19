@@ -3,7 +3,8 @@ import MenuBtn from "../components/menubtn";
 
 const StyledMenuBtns = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  padding-top: 60px;
 `;
 
 const MenuBtns = () => {
