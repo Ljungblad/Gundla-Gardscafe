@@ -3,7 +3,7 @@ import groq from 'groq';
 import client from '../client';
 import TextSection from '../components/textSection';
 import Image from '../components/image';
-import PageHeader from '../components/pageHeader';
+import PageHeader from '../components/pageheader';
 import urlBuild from '../imageBuilder';
 
 const About = (props) => {

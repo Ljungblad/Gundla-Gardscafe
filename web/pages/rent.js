@@ -4,7 +4,7 @@ import client from '../client';
 import TextSection from '../components/textSection';
 import LinkedTextSection from '../components/linkedTextSection';
 import Image from '../components/image';
-import PageHeader from '../components/pageHeader';
+import PageHeader from '../components/pageheader';
 import urlBuild from '../imageBuilder';
 
 const Rent = (props) => {

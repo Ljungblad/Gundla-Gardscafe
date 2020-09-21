@@ -1,5 +1,5 @@
 import Layout from '../components/layout';
-import PageHeader from '../components/pageHeader';
+import PageHeader from '../components/pageheader';
 import groq from 'groq';
 import client from '../client';
 import urlBuild from '../imageBuilder';
