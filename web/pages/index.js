@@ -105,13 +105,13 @@ const query = groq`{
 
 export async function getStaticProps() {
   const res = await client.fetch(query);
-  const resInsta = await fetch(
-    'https://www.instagram.com/gundlagardscafe/?__a=1'
-  );
-  const InstagramJson = await resInsta.json();
+  // const resInsta = await fetch(
+  //   'https://www.instagram.com/gundlagardscafe/?__a=1'
+  // );
+  // const InstagramJson = await resInsta.json();
 
   return {
-    props: { instagram: InstagramJson, content: res.home[0] }, // will be passed to the page component as props
+    props: { content: res.home[0] }, // will be passed to the page component as props
   };
 }
 
