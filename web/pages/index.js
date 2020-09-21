@@ -1,15 +1,27 @@
-import groq from "groq";
-import client from "../client";
-import urlBuild from "../imageBuilder";
-import Layout from "../components/layout";
-import InstagramFeed from "../components/instagramfeed";
-import PageHeader from "../components/pageheader";
-import Image from "../components/image";
-import TextSection from "../components/textSection";
-import LinkedTextSection from "../components/linkedTextSection";
-import SingleTextSection from "../components/singletextsection";
+import groq from 'groq';
+import client from '../client';
+import urlBuild from '../imageBuilder';
+import Layout from '../components/layout';
+import InstagramFeed from '../components/instagramfeed';
+import PageHeader from '../components/pageheader';
+import Image from '../components/image';
+import TextSection from '../components/textSection';
+import LinkedTextSection from '../components/linkedTextSection';
+import SingleTextSection from '../components/singletextsection';
 
 const Index = (props) => {
+  const [instaData, setInstaData] = React.useState('');
+  React.useEffect(() => {
+    fetch('https://www.instagram.com/gundlagardscafe/?__a=1')
+      .then((resp) => resp.json())
+      .then((json) => setInstaData(json));
+  }, [0]);
+
+  let instaGrid = [];
+  if (instaData) {
+    instaGrid = instaData.graphql.user.edge_owner_to_timeline_media.edges;
+  }
+
   //GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
@@ -43,46 +55,46 @@ const Index = (props) => {
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageSlogan} />
       <Image url={imageHero} alt={heroAltText} />
-      <SingleTextSection title="" text={headerTextBlock} />
+      <SingleTextSection title='' text={headerTextBlock} />
       <Image url={secondImg} alt={secondAltText} />
       <LinkedTextSection
         title={titleCafe}
         text={cafeTextBlock}
-        link="/cafe"
-        linkType="text"
-        color="white"
+        link='/cafe'
+        linkType='text'
+        color='white'
       />
       <Image url={thirdImg} alt={thirdAltText} />
       <LinkedTextSection
         title={titleFind}
         text={findTextBlock}
-        link="/findus"
-        linkType="text"
-        color="white"
+        link='/findus'
+        linkType='text'
+        color='white'
       />
       <LinkedTextSection
         title={titleCatering}
         text={cateringTextBlock}
-        link="/catering"
-        linkType="arrow"
-        color="black"
+        link='/catering'
+        linkType='arrow'
+        color='black'
       />
       <Image url={fourthImg} alt={fourthAltText} />
       <LinkedTextSection
         title={titleEvent}
         text={eventTextBlock}
-        link="/event"
-        linkType="text"
-        color="white"
+        link='/event'
+        linkType='text'
+        color='white'
       />
       <LinkedTextSection
         title={titleRent}
         text={rentTextBlock}
-        link="/rent"
-        linkType="arrow"
-        color="black"
+        link='/rent'
+        linkType='arrow'
+        color='black'
       />
-      <InstagramFeed instagramData={props.instagram} />
+      <InstagramFeed instagramData={instaGrid} />
     </Layout>
   );
 };
@@ -94,7 +106,7 @@ const query = groq`{
 export async function getStaticProps() {
   const res = await client.fetch(query);
   const resInsta = await fetch(
-    "https://www.instagram.com/gundlagardscafe/?__a=1"
+    'https://www.instagram.com/gundlagardscafe/?__a=1'
   );
   const InstagramJson = await resInsta.json();
 

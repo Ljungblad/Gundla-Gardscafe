@@ -1,8 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledImage = styled.div`
-  
-
   h3 {
     margin: 45px 0 10px 20px;
   }
@@ -30,29 +28,28 @@ const StyledImage = styled.div`
 `;
 
 const InstagramFeed = (props) => {
-  const url = props.instagramData.graphql.user.edge_owner_to_timeline_media.edges.slice(
-    0,
-    6
-  );
-  const instagramUrl = `https://www.instagram.com/${url[0].node.owner.username}`;
+  console.log(props.instagramData.slice(0, 6));
+  const url = props.instagramData.slice(0, 6);
+  // const instagramUrl = `https://www.instagram.com/${url[0].node.owner.username}`;
 
   return (
     <StyledImage>
-      <div className="feedWrapper">
+      <div className='feedWrapper'>
         <h3>INSTAGRAM</h3>
-        <div className="instsgramFeedContainer">
-          {url.map((item, i) => (
-            <div className="instagramImgWrapper" key={i}>
-              <a href={instagramUrl}>
-                <img
-                  src={item.node.display_url}
-                  key={i}
-                  alt="instagram picture"
-                  loading="lazy"
-                ></img>
-              </a>
-            </div>
-          ))}
+        <div className='instsgramFeedContainer'>
+          {url &&
+            url.map((item, i) => (
+              <div className='instagramImgWrapper' key={i}>
+                <a href='https://www.instagram.com/gundlagardscafe/?__a=1'>
+                  <img
+                    src={item.node.display_url}
+                    key={i}
+                    alt='instagram picture'
+                    loading='lazy'
+                  ></img>
+                </a>
+              </div>
+            ))}
         </div>
       </div>
     </StyledImage>
