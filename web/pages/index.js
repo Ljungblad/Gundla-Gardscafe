@@ -6,7 +6,6 @@ import InstagramFeed from "../components/instagramfeed";
 import PageHeader from "../components/pageheader";
 import Image from "../components/image";
 import TextSection from "../components/textSection";
-import LinkedTextSection from "../components/linkedTextSection";
 import SingleTextSection from "../components/singletextsection";
 
 const Index = (props) => {
@@ -57,7 +56,7 @@ const Index = (props) => {
       <Image url={imageHero} alt={heroAltText} />
       <SingleTextSection title="" text={headerTextBlock} />
       <Image url={secondImg} alt={secondAltText} />
-      <LinkedTextSection
+      <TextSection
         title={titleCafe}
         text={cafeTextBlock}
         link="/cafe"
@@ -65,9 +64,11 @@ const Index = (props) => {
         backgroundColor="#FFFFFF"
         textColor="#000201, 100 %"
         width="50"
+        height="410"
+        align="center"
       />
       <Image url={thirdImg} alt={thirdAltText} />
-      <LinkedTextSection
+      <TextSection
         title={titleFind}
         text={findTextBlock}
         link="/findus"
@@ -75,8 +76,10 @@ const Index = (props) => {
         backgroundColor="#F3F1E7"
         textColor="#000201"
         width="50"
+        height="410"
+        align="center"
       />
-      <LinkedTextSection
+      <TextSection
         title={titleCatering}
         text={cateringTextBlock}
         link="/catering"
@@ -84,9 +87,11 @@ const Index = (props) => {
         backgroundColor="#C05B3D"
         textColor="#FFFFFF"
         width="50"
+        height="410"
+        align="center"
       />
       <Image url={fourthImg} alt={fourthAltText} />
-      <LinkedTextSection
+      <TextSection
         title={titleEvent}
         text={eventTextBlock}
         link="/event"
@@ -94,8 +99,10 @@ const Index = (props) => {
         backgroundColor="#F3F1E7"
         textColor="#000201"
         width="50"
+        height="410"
+        align="center"
       />
-      <LinkedTextSection
+      <TextSection
         title={titleRent}
         text={rentTextBlock}
         link="/rent"
@@ -103,6 +110,8 @@ const Index = (props) => {
         backgroundColor="#C05B3D"
         textColor="#FFFFFF"
         width="100"
+        height="280"
+        align="left"
       />
       <InstagramFeed instagramData={instaGrid} />
     </Layout>
@@ -115,13 +124,9 @@ const query = groq`{
 
 export async function getStaticProps() {
   const res = await client.fetch(query);
-  // const resInsta = await fetch(
-  //   'https://www.instagram.com/gundlagardscafe/?__a=1'
-  // );
-  // const InstagramJson = await resInsta.json();
 
   return {
-    props: { content: res.home[0] }, // will be passed to the page component as props
+    props: { content: res.home[0] },
   };
 }
 

@@ -4,12 +4,9 @@ import urlBuild from "../imageBuilder";
 import Layout from "../components/layout";
 import PageHeader from "../components/pageheader";
 import TextSection from "../components/textSection";
-import LinkedTextSection from "../components/linkedTextSection";
 import Image from "../components/image";
 
 const CafePage = (props) => {
-  console.log(props.content.cafe[0]);
-
   //GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;
@@ -36,18 +33,15 @@ const CafePage = (props) => {
 
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
-      <PageHeader
-        title={pageTitle || "Titel"}
-        text={headerTextBlock || "Text"}
-      />
+      <PageHeader title={pageTitle} text={headerTextBlock} />
       <Image url={headerImg} alt={headerAltText} />
-      <TextSection title={menuTitle || "Titel"} text={menuText || "Text"} />
+      <TextSection title={menuTitle} text={menuText} />
       <Image url={secondImg} alt={secondAltText} />
       <Image url={thirdImg} alt={thirdAltText} />
       <Image url={fourthImg} alt={fourthAltText} />
-      <LinkedTextSection
-        title={cateringTitle || "Titel"}
-        text={cateringText || "Text"}
+      <TextSection
+        title={cateringTitle}
+        text={cateringText}
         link="/catering"
         color="black"
         linkType="arrow"

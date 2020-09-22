@@ -1,11 +1,10 @@
-import Layout from '../components/layout';
-import groq from 'groq';
-import client from '../client';
-import TextSection from '../components/textSection';
-import LinkedTextSection from '../components/linkedTextSection';
-import Image from '../components/image';
-import PageHeader from '../components/pageheader';
-import urlBuild from '../imageBuilder';
+import Layout from "../components/layout";
+import groq from "groq";
+import client from "../client";
+import TextSection from "../components/textSection";
+import Image from "../components/image";
+import PageHeader from "../components/pageheader";
+import urlBuild from "../imageBuilder";
 
 const Rent = (props) => {
   const navigationData = props.globalProps.navigation;
@@ -39,11 +38,11 @@ const Rent = (props) => {
       <Image url={secondImage} alt={secondImageAlt} />
       <Image url={thirdImage} alt={thirdImageAlt} />
       <Image url={fourthImage} alt={fourthImageAlt} />
-      <LinkedTextSection
+      <TextSection
         title={cateringTitle}
         text={cateringText}
-        link='/catering}'
-        linkType='arrow'
+        link="/catering}"
+        linkType="arrow"
       />
     </Layout>
   );
