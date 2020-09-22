@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import PageHeader from "../components/pageheader";
 import Image from "../components/image";
 import TextSection from "../components/textSection";
-import LinkedTextSection from "../components/linkedTextSection";
 
 const CateringPage = (props) => {
   //GLOBAL PROPS
@@ -40,7 +39,7 @@ const CateringPage = (props) => {
       <Image url={secondImg} alt={secondAltText} />
       <Image url={thirdImg} alt={thirdAltText} />
       <Image url={fourthImg} alt={fourthAltText} />
-      <LinkedTextSection
+      <TextSection
         title={titleRent}
         text={rentTextBlock}
         link="/rent"

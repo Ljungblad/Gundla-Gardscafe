@@ -1,12 +1,11 @@
-import Layout from '../components/layout';
-import PageHeader from '../components/pageheader';
-import groq from 'groq';
-import client from '../client';
-import urlBuild from '../imageBuilder';
-import Image from '../components/image';
-import TextSection from '../components/textSection';
-import LinkedTextSection from '../components/linkedTextSection';
-import EventForm from '../components/form';
+import Layout from "../components/layout";
+import PageHeader from "../components/pageheader";
+import groq from "groq";
+import client from "../client";
+import urlBuild from "../imageBuilder";
+import Image from "../components/image";
+import TextSection from "../components/textSection";
+import EventForm from "../components/form";
 
 const Event = (props) => {
   // GLOBAL PROPS
@@ -30,8 +29,8 @@ const Event = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader
-        title={eventPageData.titleEvent || 'Page title'}
-        text={pageDesc || 'Page description'}
+        title={eventPageData.titleEvent || "Page title"}
+        text={pageDesc || "Page description"}
       />
       <Image url={firstImageUrl} alt={secondImageAlt} />
       {events.map((event, i) => {
@@ -39,7 +38,7 @@ const Event = (props) => {
         const eventInfo = event.textBlockHero[0].children[0].text;
         return <TextSection key={i} title={title} text={eventInfo} />;
       })}
-      <LinkedTextSection title={bookText} linkType='arrow' />
+      <TextSection title={bookText} linkType="arrow" />
       <Image url={secondImageUrl} alt={secondImageAlt} />
       <EventForm events={events} eventPageData={eventPageData} />
     </Layout>
