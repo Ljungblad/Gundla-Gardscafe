@@ -1,18 +1,18 @@
-import groq from 'groq';
-import client from '../client';
-import urlBuild from '../imageBuilder';
-import Layout from '../components/layout';
-import InstagramFeed from '../components/instagramfeed';
-import PageHeader from '../components/pageheader';
-import Image from '../components/image';
-import TextSection from '../components/textSection';
-import LinkedTextSection from '../components/linkedTextSection';
-import SingleTextSection from '../components/singletextsection';
+import groq from "groq";
+import client from "../client";
+import urlBuild from "../imageBuilder";
+import Layout from "../components/layout";
+import InstagramFeed from "../components/instagramfeed";
+import PageHeader from "../components/pageheader";
+import Image from "../components/image";
+import TextSection from "../components/textSection";
+import LinkedTextSection from "../components/linkedTextSection";
+import SingleTextSection from "../components/singletextsection";
 
 const Index = (props) => {
-  const [instaData, setInstaData] = React.useState('');
+  const [instaData, setInstaData] = React.useState("");
   React.useEffect(() => {
-    fetch('https://www.instagram.com/gundlagardscafe/?__a=1')
+    fetch("https://www.instagram.com/gundlagardscafe/?__a=1")
       .then((resp) => resp.json())
       .then((json) => setInstaData(json));
   }, [0]);
@@ -55,44 +55,54 @@ const Index = (props) => {
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageSlogan} />
       <Image url={imageHero} alt={heroAltText} />
-      <SingleTextSection title='' text={headerTextBlock} />
+      <SingleTextSection title="" text={headerTextBlock} />
       <Image url={secondImg} alt={secondAltText} />
       <LinkedTextSection
         title={titleCafe}
         text={cafeTextBlock}
-        link='/cafe'
-        linkType='text'
-        color='white'
+        link="/cafe"
+        linkType="text"
+        backgroundColor="#FFFFFF"
+        textColor="#000201, 100 %"
+        width="50"
       />
       <Image url={thirdImg} alt={thirdAltText} />
       <LinkedTextSection
         title={titleFind}
         text={findTextBlock}
-        link='/findus'
-        linkType='text'
-        color='white'
+        link="/findus"
+        linkType="text"
+        backgroundColor="#F3F1E7"
+        textColor="#000201"
+        width="50"
       />
       <LinkedTextSection
         title={titleCatering}
         text={cateringTextBlock}
-        link='/catering'
-        linkType='arrow'
-        color='black'
+        link="/catering"
+        linkType="arrow"
+        backgroundColor="#C05B3D"
+        textColor="#FFFFFF"
+        width="50"
       />
       <Image url={fourthImg} alt={fourthAltText} />
       <LinkedTextSection
         title={titleEvent}
         text={eventTextBlock}
-        link='/event'
-        linkType='text'
-        color='white'
+        link="/event"
+        linkType="text"
+        backgroundColor="#F3F1E7"
+        textColor="#000201"
+        width="50"
       />
       <LinkedTextSection
         title={titleRent}
         text={rentTextBlock}
-        link='/rent'
-        linkType='arrow'
-        color='black'
+        link="/rent"
+        linkType="arrow"
+        backgroundColor="#C05B3D"
+        textColor="#FFFFFF"
+        width="100"
       />
       <InstagramFeed instagramData={instaGrid} />
     </Layout>

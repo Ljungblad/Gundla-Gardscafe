@@ -1,9 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledLinkedTextSection = styled.div`
   padding: 60px 24px 60px 24px;
-  background-color: ${({ color }) =>
-    color == 'white' ? '#fafafa' : '#1c1c1c'};
+  background-color: ${(props) => props.backgroundColor};
 
   h3 {
     text-transform: uppercase;
@@ -12,17 +11,17 @@ const StyledLinkedTextSection = styled.div`
 
   h3,
   p {
-    color: ${({ color }) => (color == 'white' ? '#1c1c1c' : '#fafafa')};
+    color: ${(props) => props.textColor};
   }
 
   a {
-    color: ${({ color }) => (color == 'white' ? '#1c1c1c' : '#fafafa')};
+    color: ${(props) => props.textColor};
   }
 
   .arrowLinkContainer {
     width: 100%;
     margin-top: 20px;
-    display: ${({ linkType }) => (linkType == 'arrow' ? 'block' : 'none')};
+    display: ${({ linkType }) => (linkType == "arrow" ? "block" : "none")};
   }
 
   .arrowLinkContainer a {
@@ -30,7 +29,7 @@ const StyledLinkedTextSection = styled.div`
   }
 
   .textLinkContainer {
-    display: ${({ linkType }) => (linkType == 'text' ? 'block' : 'none')};
+    display: ${({ linkType }) => (linkType == "text" ? "block" : "none")};
     margin-top: 20px;
     width: 100%;
   }
@@ -39,17 +38,26 @@ const StyledLinkedTextSection = styled.div`
     display: flex;
     justify-content: flex-end;
   }
+
+  @media (min-width: 992px) {
+    width: ${(props) => props.width}%;
+  }
 `;
 
 const LinkedTextSection = (props) => {
   return (
-    <StyledLinkedTextSection color={props.color} linkType={props.linkType}>
+    <StyledLinkedTextSection
+      backgroundColor={props.backgroundColor}
+      textColor={props.textColor}
+      linkType={props.linkType}
+      width={props.width}
+    >
       <h3>{props.title}</h3>
       <p>{props.text}</p>
-      <div className='arrowLinkContainer'>
+      <div className="arrowLinkContainer">
         <a href={props.link}>INSERT ICON HERE --></a>
       </div>
-      <div className='textLinkContainer'>
+      <div className="textLinkContainer">
         <a href={props.link}>
           <p>LÄS MER</p>
         </a>
