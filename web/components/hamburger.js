@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import SideBar from '../components/sidebar';
+import styled from "styled-components";
+import SideBar from "../components/sidebar";
 
 const StyledBurger = styled.div`
   width: 30px;
@@ -18,13 +18,13 @@ const StyledBurger = styled.div`
     transition: 0.4s;
 
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
+      opacity: ${({ open }) => (open ? "0" : "1")};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;

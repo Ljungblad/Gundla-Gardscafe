@@ -5,6 +5,10 @@ const StyledMenuBtns = styled.div`
   display: flex;
   justify-content: space-around;
   padding-top: 60px;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const MenuBtns = () => {

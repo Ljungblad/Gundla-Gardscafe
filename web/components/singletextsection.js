@@ -20,6 +20,10 @@ const StyledSingleTextSection = styled.div`
   p {
     color: black;
   }
+
+  @media (min-width: 992px) {
+    width: 100%;
+  }
 `;
 
 const SingleTextSection = (props) => {

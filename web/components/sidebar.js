@@ -4,7 +4,7 @@ import Link from "next/link";
 const StyledSideBar = styled.div`
   height: 100vh;
   width: ${({ open }) => (open ? "250px" : "0px")};
-  background: hotpink;
+  background: #919984;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,26 @@ const StyledSideBar = styled.div`
       align-items: center;
       text-decoration: none;
       color: #000;
+    }
+  }
+
+  @media (min-width: 992px) {
+    width: 260px;
+    height: 60%;
+    padding-left: 30px;
+    position: relative;
+
+    .sideBarLogo {
+      margin-top: 45px;
+    }
+
+    .navigationLinks {
+      margin-top: 40px;
+
+      a {
+        font-size: 18px;
+        height: 55px;
+      }
     }
   }
 `;

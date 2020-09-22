@@ -2,7 +2,17 @@ import Head from "next/head";
 import Nav from "../components/nav";
 import MenuBtns from "../components/menubtns";
 import Footer from "../components/footer";
+import SideMenu from "../components/sidemenu";
+import styled from "styled-components";
+import Copyright from "../components/copyright";
 
+const StyledPageWrapper = styled.div`
+  @media (min-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 260px;
+  }
+`;
 
 const Layout = (props) => {
   return (
@@ -13,7 +23,14 @@ const Layout = (props) => {
       </Head>
       <Nav navigationLinks={props.navigationLinks} />
       <MenuBtns />
-      {props.children}
+      <SideMenu
+        navigationLinks={props.navigationLinks}
+        footerData={props.footerData}
+      />
+      <StyledPageWrapper>
+        {props.children}
+        <Copyright footerData={props.footerData} />
+      </StyledPageWrapper>
       <Footer footerData={props.footerData} />
     </main>
   );
