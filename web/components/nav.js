@@ -10,6 +10,10 @@ const StyledNav = styled.nav`
   align-items: center;
   padding: 0 20px 0 20px;
   position: fixed;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 const Nav = (props) => {
