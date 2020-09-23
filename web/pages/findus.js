@@ -9,8 +9,6 @@ import Map from "../components/map";
 import SingleTextSection from "../components/singletextsection";
 
 const FindUsPage = (props) => {
-  console.log(props.content.findUs[0]);
-
   //GLOBAL PROPS
   const navigationData = props.globalProps.navigation;
   const footerData = props.globalProps.footer;

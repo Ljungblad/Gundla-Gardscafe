@@ -19,7 +19,9 @@ const StyledNav = styled.nav`
 const Nav = (props) => {
   return (
     <StyledNav>
-      <a href="/"><img src="/logo.svg"/></a>
+      <a href="/">
+        <img src="/logo.svg" />
+      </a>
       <Burger navigationLinks={props.navigationLinks} />
     </StyledNav>
   );

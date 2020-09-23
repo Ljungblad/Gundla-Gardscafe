@@ -43,9 +43,7 @@ const StyledImage = styled.div`
 `;
 
 const InstagramFeed = (props) => {
-  console.log(props.instagramData.slice(0, 6));
   const url = props.instagramData.slice(0, 6);
-  // const instagramUrl = `https://www.instagram.com/${url[0].node.owner.username}`;
 
   return (
     <StyledImage>

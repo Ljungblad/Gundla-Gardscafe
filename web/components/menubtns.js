@@ -13,7 +13,6 @@ const StyledMenuBtns = styled.div`
 
 const MenuBtns = () => {
   const [activeButton, setActiveButton] = React.useState(false);
-  // const menuBtnsId = ["CAFÉ", "ÖPPETTIDER", "HITTA HIT"];
 
   const menuBtns = [
     {

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledImage = styled.div`
   height: 440px;
@@ -23,7 +23,6 @@ const StyledImage = styled.div`
 `;
 
 const Image = (props) => {
-  console.log(props.paddingDesktop);
   return (
     <StyledImage
       width={props.width}
@@ -33,7 +32,7 @@ const Image = (props) => {
       paddingMobile={props.paddingMobile}
       paddingDesktop={props.paddingDesktop}
     >
-      <img src={props.url} alt={props.alt || 'image'} loading='lazy' />
+      <img src={props.url} alt={props.alt || "image"} loading="lazy" />
     </StyledImage>
   );
 };
