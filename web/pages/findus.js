@@ -39,12 +39,36 @@ const FindUsPage = (props) => {
         title={pageTitle || "Titel"}
         text={headerTextBlock || "Text"}
       />
-      <Image url={headerImg} alt={headerAltText} />
-      <TextSection title={publicTransportTitle} text={publicTransportText} />
-      <TextSection title={bikeTitle} text={bikeText} />
-      <TextSection title={parkingTitle} text={parkingText} />
+      <Image url={headerImg} alt={headerAltText} width="100" />
+      <TextSection
+        title={publicTransportTitle}
+        text={publicTransportText}
+        backgroundColor="#FFFFFF"
+        textColor="#000201"
+        width="100"
+        height="280"
+        align="left"
+      />
+      <TextSection
+        title={bikeTitle}
+        text={bikeText}
+        backgroundColor="#FFFFFF"
+        textColor="#000201"
+        width="100"
+        height="280"
+        align="left"
+      />
+      <TextSection
+        title={parkingTitle}
+        text={parkingText}
+        backgroundColor="#FFFFFF"
+        textColor="#000201"
+        width="100"
+        height="280"
+        align="left"
+      />
       <Map />
-      <SingleTextSection title={welcomeTitle} />
+      <SingleTextSection title={welcomeTitle} hideDesktop="true" />
     </Layout>
   );
 };

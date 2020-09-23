@@ -28,6 +28,12 @@ const StyledSingleTextSection = styled.div`
     align-items: center;
     background-color: #242b18;
 
+    ${(props) =>
+      props.hideDesktop === "true" &&
+      `
+    display: none;
+    `}
+
     .textSectionContainer {
       width: 460px;
 
@@ -45,6 +51,7 @@ const SingleTextSection = (props) => {
     <StyledSingleTextSection
       backgroundColor={props.backgroundColor}
       textColor={props.textColor}
+      hideDesktop={props.hideDesktop}
     >
       <div className="textSectionContainer">
         <h3>{props.title}</h3>
