@@ -34,17 +34,28 @@ const CateringPage = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={headerTextBlock} />
-      <Image url={headerImg} alt={headerAltText} />
-      <TextSection title={titleRequest} text={requestEmail} />
-      <Image url={secondImg} alt={secondAltText} />
-      <Image url={thirdImg} alt={thirdAltText} />
-      <Image url={fourthImg} alt={fourthAltText} />
+      <Image url={headerImg} alt={headerAltText} width="50" />
+      <TextSection
+        title={titleRequest}
+        text={requestEmail}
+        backgroundColor="#C05B3D"
+        textColor="#FFFFFF"
+        width="50"
+        align="center"
+      />
+      <Image url={secondImg} alt={secondAltText} width="40" />
+      <Image url={thirdImg} alt={thirdAltText} width="60" />
+      <Image url={fourthImg} alt={fourthAltText} width="100" />
       <TextSection
         title={titleRent}
         text={rentTextBlock}
         link="/rent"
-        color="black"
         linkType="arrow"
+        backgroundColor="#C05B3D"
+        textColor="#FFFFFF"
+        width="100"
+        height="280"
+        align="left"
       />
     </Layout>
   );
