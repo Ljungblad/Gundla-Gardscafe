@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import Burger from "../components/hamburger";
+import styled from 'styled-components';
+import Burger from '../components/hamburger';
 
 const StyledNav = styled.nav`
   height: 61px;
   width: 100%;
-  background: grey;
+  background: #919984;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@ const StyledNav = styled.nav`
 const Nav = (props) => {
   return (
     <StyledNav>
-      <a href="/">Logo</a>
+      <a href='/'>Logo</a>
       <Burger navigationLinks={props.navigationLinks} />
     </StyledNav>
   );

@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
-  background: grey;
-  color: white;
+  background: #4c5340;
+  color: #fff;
   padding: 40px 20px 40px 20px;
 
   .footerOpeningHours {
@@ -63,36 +63,36 @@ const Footer = (props) => {
   const contactTitle = footerData.textBlockContact[0].children[0].text;
 
   return (
-    <StyledFooter id="openingHours">
-      <div className="footerOpeningHours">
+    <StyledFooter id='openingHours'>
+      <div className='footerOpeningHours'>
         <h3>{openingHoursTitle}</h3>
-        <div className="openingHoursWeekDay">
+        <div className='openingHoursWeekDay'>
           <p>{weekDayTitle}</p>
           <p>{weekDayHours}</p>
         </div>
-        <div className="openingHoursWeekend">
+        <div className='openingHoursWeekend'>
           <p>{weekendTitle}</p>
           <p>{weekendHours}</p>
         </div>
       </div>
-      <div className="footerAdress">
+      <div className='footerAdress'>
         <h3>{addressTitle}</h3>
         <p>{address}</p>
       </div>
-      <div className="footerContactUs">
+      <div className='footerContactUs'>
         <h3>{contactTitle}</h3>
         <p>{footerData.email}</p>
       </div>
-      <div className="footerBottomSection">
-        <div className="footerLogo">
+      <div className='footerBottomSection'>
+        <div className='footerLogo'>
           <h3>LOGO</h3>
         </div>
-        <div className="footerLinks">
+        <div className='footerLinks'>
           <a href={footerData.facebookUrl}>Facebook</a>
           <a href={footerData.instagramkUrl}>Instagram</a>
           <a href={`mailto:${footerData.email}`}>Mail</a>
         </div>
-        <div className="footerCopyRight">
+        <div className='footerCopyRight'>
           <p>
             {footerData.copyrightText} {currentYear}
           </p>
