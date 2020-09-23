@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledSingleTextSection = styled.div`
   width: 100vw;
-  background-color: white;
+  background-color: ${(props) => props.backgroundColor};
   padding: 60px 24px 70px 24px;
 
   h3 {
@@ -18,19 +18,38 @@ const StyledSingleTextSection = styled.div`
 
   h3,
   p {
-    color: black;
+    color: ${(props) => props.textColor};
   }
 
   @media (min-width: 992px) {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242b18;
+
+    .textSectionContainer {
+      width: 460px;
+
+      p {
+        font-size: 22px;
+        line-height: 35px;
+        letter-spacing: 2px;
+      }
+    }
   }
 `;
 
 const SingleTextSection = (props) => {
   return (
-    <StyledSingleTextSection>
-      <h3>{props.title}</h3>
-      <p>{props.text}</p>
+    <StyledSingleTextSection
+      backgroundColor={props.backgroundColor}
+      textColor={props.textColor}
+    >
+      <div className="textSectionContainer">
+        <h3>{props.title}</h3>
+        <p>{props.text}</p>
+      </div>
     </StyledSingleTextSection>
   );
 };

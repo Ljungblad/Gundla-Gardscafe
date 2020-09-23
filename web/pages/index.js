@@ -53,9 +53,14 @@ const Index = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageSlogan} />
-      <Image url={imageHero} alt={heroAltText} />
-      <SingleTextSection title="" text={headerTextBlock} />
-      <Image url={secondImg} alt={secondAltText} />
+      <Image url={imageHero} alt={heroAltText} width="100" />
+      <SingleTextSection
+        title=""
+        text={headerTextBlock}
+        textColor="#FFFFFF"
+        backgroundColor="#242B18"
+      />
+      <Image url={secondImg} alt={secondAltText} width="50" />
       <TextSection
         title={titleCafe}
         text={cafeTextBlock}
@@ -67,7 +72,7 @@ const Index = (props) => {
         height="410"
         align="center"
       />
-      <Image url={thirdImg} alt={thirdAltText} />
+      <Image url={thirdImg} alt={thirdAltText} width="100" />
       <TextSection
         title={titleFind}
         text={findTextBlock}
@@ -90,7 +95,7 @@ const Index = (props) => {
         height="410"
         align="center"
       />
-      <Image url={fourthImg} alt={fourthAltText} />
+      <Image url={fourthImg} alt={fourthAltText} width="50" />
       <TextSection
         title={titleEvent}
         text={eventTextBlock}
@@ -99,7 +104,6 @@ const Index = (props) => {
         backgroundColor="#F3F1E7"
         textColor="#000201"
         width="50"
-        height="410"
         align="center"
       />
       <TextSection
