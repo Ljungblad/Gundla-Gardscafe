@@ -1,10 +1,10 @@
-import groq from "groq";
-import client from "../client";
-import urlBuild from "../imageBuilder";
-import Layout from "../components/layout";
-import PageHeader from "../components/pageheader";
-import TextSection from "../components/textSection";
-import Image from "../components/image";
+import groq from 'groq';
+import client from '../client';
+import urlBuild from '../imageBuilder';
+import Layout from '../components/layout';
+import PageHeader from '../components/pageheader';
+import TextSection from '../components/textSection';
+import Image from '../components/image';
 
 const CafePage = (props) => {
   //GLOBAL PROPS
@@ -34,17 +34,26 @@ const CafePage = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={headerTextBlock} />
-      <Image url={headerImg} alt={headerAltText} />
-      <TextSection title={menuTitle} text={menuText} />
-      <Image url={secondImg} alt={secondAltText} />
-      <Image url={thirdImg} alt={thirdAltText} />
-      <Image url={fourthImg} alt={fourthAltText} />
+      <Image url={headerImg} alt={headerAltText} width='50%' />
+      <TextSection
+        title={menuTitle}
+        text={menuText}
+        width='50'
+        align='left'
+        backgroundColor='#F3F1E7'
+      />
+      <Image url={secondImg} alt={secondAltText} width='50%' />
+      <Image url={thirdImg} alt={thirdAltText} width='50%' />
+      <Image url={fourthImg} alt={fourthAltText} width='100%' />
       <TextSection
         title={cateringTitle}
         text={cateringText}
-        link="/catering"
-        color="black"
-        linkType="arrow"
+        link='/catering'
+        textColor='#FFF'
+        align='left'
+        linkType='arrow'
+        backgroundColor='#C05B3D'
+        width='100'
       />
     </Layout>
   );

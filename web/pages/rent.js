@@ -33,7 +33,7 @@ const Rent = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={rentTitle} text={rentText} />
-      <Image url={firstImage} alt={firstImageAlt} width="50" />
+      <Image url={firstImage} alt={firstImageAlt} width="50%" />
       <TextSection
         title={requestTitle}
         text={requestText}
@@ -42,9 +42,9 @@ const Rent = (props) => {
         width="50"
         align="center"
       />
-      <Image url={secondImage} alt={secondImageAlt} width="40" />
-      <Image url={thirdImage} alt={thirdImageAlt} width="60" />
-      <Image url={fourthImage} alt={fourthImageAlt} width="100" />
+      <Image url={secondImage} alt={secondImageAlt} width="40%" />
+      <Image url={thirdImage} alt={thirdImageAlt} width="60%" />
+      <Image url={fourthImage} alt={fourthImageAlt} width="100%" />
       <TextSection
         title={cateringTitle}
         text={cateringText}
