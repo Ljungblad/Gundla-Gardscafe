@@ -32,7 +32,7 @@ const Event = (props) => {
         title={eventPageData.titleEvent || 'Page title'}
         text={pageDesc || 'Page description'}
       />
-      <Image url={firstImageUrl} alt={firstImageAlt} width='100' />
+      <Image url={firstImageUrl} alt={firstImageAlt} width='100%' />
       <section className='eventSection'>
         {events.map((event, i) => {
           const title = event.eventTitle;
@@ -58,7 +58,7 @@ const Event = (props) => {
         textColor='#fff'
         align='left'
       />
-      <Image url={secondImageUrl} alt={secondImageAlt} width='100' />
+      <Image url={secondImageUrl} alt={secondImageAlt} width='100%' />
       <EventForm events={events} eventPageData={eventPageData} />
     </Layout>
   );

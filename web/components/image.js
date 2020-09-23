@@ -14,6 +14,10 @@ const StyledImage = styled.div`
     width: ${(props) => props.width};
     height: ${(props) => props.height};
     margin: ${(props) => props.marginMobile};
+
+    img {
+      padding: ${(props) => props.paddingDesktop};
+    }
   }
 `;
 
@@ -25,7 +29,12 @@ const Image = (props) => {
       marginMobile={props.marginMobile}
       marginDesktop={props.marginDesktop}
     >
-      <img src={props.url} alt={props.alt || 'image'} loading='lazy' />
+      <img
+        paddingDesktop={props.paddingDesktop}
+        src={props.url}
+        alt={props.alt || 'image'}
+        loading='lazy'
+      />
     </StyledImage>
   );
 };

@@ -39,7 +39,7 @@ const FindUsPage = (props) => {
         title={pageTitle || "Titel"}
         text={headerTextBlock || "Text"}
       />
-      <Image url={headerImg} alt={headerAltText} width="100" />
+      <Image url={headerImg} alt={headerAltText} width="100%" />
       <TextSection
         title={publicTransportTitle}
         text={publicTransportText}
