@@ -67,7 +67,7 @@ const Index = (props) => {
         link="/cafe"
         linkType="text"
         backgroundColor="#FFFFFF"
-        textColor="#000201, 100 %"
+        textColor="#000201"
         width="50"
         height="410"
         align="center"
