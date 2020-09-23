@@ -8,6 +8,7 @@ const StyledImage = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding: ${(props) => props.paddingMobile};
   }
 
   @media (min-width: 992px) {
@@ -22,19 +23,17 @@ const StyledImage = styled.div`
 `;
 
 const Image = (props) => {
+  console.log(props.paddingDesktop);
   return (
     <StyledImage
       width={props.width}
       height={props.height}
       marginMobile={props.marginMobile}
       marginDesktop={props.marginDesktop}
+      paddingMobile={props.paddingMobile}
+      paddingDesktop={props.paddingDesktop}
     >
-      <img
-        paddingDesktop={props.paddingDesktop}
-        src={props.url}
-        alt={props.alt || 'image'}
-        loading='lazy'
-      />
+      <img src={props.url} alt={props.alt || 'image'} loading='lazy' />
     </StyledImage>
   );
 };
