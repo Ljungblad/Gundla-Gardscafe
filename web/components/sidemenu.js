@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import SideBar from '../components/sidebar';
-import FooterDesktop from '../components/footerdesktop';
+import styled from "styled-components";
+import SideBar from "../components/sidebar";
+import FooterDesktop from "../components/footerdesktop";
 
 const StyledSideMenu = styled.div`
   display: none;
