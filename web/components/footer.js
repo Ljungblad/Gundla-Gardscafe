@@ -34,6 +34,12 @@ const StyledFooter = styled.footer`
 
   .footerLinks {
     margin-bottom: 10px;
+
+    height: 50px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footerBottomSection {
@@ -85,12 +91,18 @@ const Footer = (props) => {
       </div>
       <div className='footerBottomSection'>
         <div className='footerLogo'>
-          <h3>LOGO</h3>
+          <img src='/logo2.png' />
         </div>
         <div className='footerLinks'>
-          <a href={footerData.facebookUrl}>Facebook</a>
-          <a href={footerData.instagramkUrl}>Instagram</a>
-          <a href={`mailto:${footerData.email}`}>Mail</a>
+          <a href={footerData.facebookUrl}>
+            <img src='/facebookIcon.png' />
+          </a>
+          <a href={footerData.instagramkUrl}>
+            <img src='/instagramIcon.png' />
+          </a>
+          <a href={`mailto:${footerData.email}`}>
+            <img src='/mailIcon.png' />
+          </a>
         </div>
         <div className='footerCopyRight'>
           <p>

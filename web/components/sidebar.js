@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import Link from "next/link";
+import styled from 'styled-components';
+import Link from 'next/link';
 
 const StyledSideBar = styled.div`
   height: 100vh;
-  width: ${({ open }) => (open ? "250px" : "0px")};
+  width: ${({ open }) => (open ? '250px' : '0px')};
   background: #919984;
   position: absolute;
   display: flex;
@@ -12,7 +12,7 @@ const StyledSideBar = styled.div`
   right: 0;
   overflow: hidden;
   transition: 0.4s;
-  padding: ${({ open }) => (open ? "0px 30px 0px 30px" : "0px")};
+  padding: ${({ open }) => (open ? '0px 30px 0px 30px' : '0px')};
 
   .sideBarLogo {
     margin-top: 85px;
@@ -22,7 +22,7 @@ const StyledSideBar = styled.div`
     display: flex;
     flex-direction: column;
     white-space: nowrap;
-    margin-top: 65px;
+    margin-top: 50px;
 
     a {
       height: 60px;
@@ -35,7 +35,7 @@ const StyledSideBar = styled.div`
 
   @media (min-width: 992px) {
     width: 260px;
-    height: 60%;
+    height: 550px;
     padding-left: 30px;
     position: relative;
 
@@ -59,10 +59,10 @@ const SideBar = (props) => {
 
   return (
     <StyledSideBar open={props.open}>
-      <a href="/">
-        <h3 className="sideBarLogo">LOGO</h3>
+      <a href='/'>
+        <img src='/logo2.png' className='sideBarLogo' />
       </a>
-      <div className="navigationLinks">
+      <div className='navigationLinks'>
         {navigationLinks.map((item, i) => (
           <a href={item.link} key={i}>
             {item.title}

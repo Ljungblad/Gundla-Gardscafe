@@ -39,6 +39,11 @@ const StyledFooterDesktop = styled.footer`
 
     .footerLinks {
       margin-bottom: 10px;
+      height: 50px;
+      width: 130px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .footerBottomSection {
@@ -63,27 +68,33 @@ const FooterDesktop = (props) => {
   const address = footerData.textBlockAddress[1].children[0].text;
 
   return (
-    <StyledFooterDesktop id="openingHours">
-      <div className="footerOpeningHours">
+    <StyledFooterDesktop id='openingHours'>
+      <div className='footerOpeningHours'>
         <h3>{openingHoursTitle}</h3>
-        <div className="openingHoursWeekDay">
+        <div className='openingHoursWeekDay'>
           <p>{weekDayTitle}</p>
           <p>{weekDayHours}</p>
         </div>
-        <div className="openingHoursWeekend">
+        <div className='openingHoursWeekend'>
           <p>{weekendTitle}</p>
           <p>{weekendHours}</p>
         </div>
       </div>
-      <div className="footerAdress">
+      <div className='footerAdress'>
         <h3>{addressTitle}</h3>
         <p>{address}</p>
       </div>
-      <div className="footerBottomSection">
-        <div className="footerLinks">
-          <a href={footerData.facebookUrl}>Facebook</a>
-          <a href={footerData.instagramkUrl}>Instagram</a>
-          <a href={`mailto:${footerData.email}`}>Mail</a>
+      <div className='footerBottomSection'>
+        <div className='footerLinks'>
+          <a href={footerData.facebookUrl}>
+            <img src='/facebookIcon.png' />
+          </a>
+          <a href={footerData.instagramkUrl}>
+            <img src='/instagramIcon.png' />
+          </a>
+          <a href={`mailto:${footerData.email}`}>
+            <img src='/mailIcon.png' />
+          </a>
         </div>
       </div>
     </StyledFooterDesktop>
