@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledImage = styled.div`
   h3 {
@@ -25,6 +25,21 @@ const StyledImage = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  @media (min-width: 992px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .instsgramFeedContainer {
+      width: 690px;
+
+      .instagramImgWrapper {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
 `;
 
 const InstagramFeed = (props) => {
@@ -34,18 +49,18 @@ const InstagramFeed = (props) => {
 
   return (
     <StyledImage>
-      <div className='feedWrapper'>
+      <div className="feedWrapper">
         <h3>INSTAGRAM</h3>
-        <div className='instsgramFeedContainer'>
+        <div className="instsgramFeedContainer">
           {url &&
             url.map((item, i) => (
-              <div className='instagramImgWrapper' key={i}>
-                <a href='https://www.instagram.com/gundlagardscafe/?__a=1'>
+              <div className="instagramImgWrapper" key={i}>
+                <a href="https://www.instagram.com/gundlagardscafe/?__a=1">
                   <img
                     src={item.node.display_url}
                     key={i}
-                    alt='instagram picture'
-                    loading='lazy'
+                    alt="instagram picture"
+                    loading="lazy"
                   ></img>
                 </a>
               </div>
