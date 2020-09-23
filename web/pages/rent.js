@@ -33,16 +33,28 @@ const Rent = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={rentTitle} text={rentText} />
-      <Image url={firstImage} alt={firstImageAlt} />
-      <TextSection title={requestTitle} text={requestText} />
-      <Image url={secondImage} alt={secondImageAlt} />
-      <Image url={thirdImage} alt={thirdImageAlt} />
-      <Image url={fourthImage} alt={fourthImageAlt} />
+      <Image url={firstImage} alt={firstImageAlt} width="50" />
+      <TextSection
+        title={requestTitle}
+        text={requestText}
+        backgroundColor="#C05B3D"
+        textColor="#FFFFFF"
+        width="50"
+        align="center"
+      />
+      <Image url={secondImage} alt={secondImageAlt} width="40" />
+      <Image url={thirdImage} alt={thirdImageAlt} width="60" />
+      <Image url={fourthImage} alt={fourthImageAlt} width="100" />
       <TextSection
         title={cateringTitle}
         text={cateringText}
         link="/catering}"
         linkType="arrow"
+        backgroundColor="#C05B3D"
+        textColor="#FFFFFF"
+        width="100"
+        height="280"
+        align="left"
       />
     </Layout>
   );
