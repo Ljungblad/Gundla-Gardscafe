@@ -1,10 +1,10 @@
-import Layout from "../components/layout";
-import groq from "groq";
-import client from "../client";
-import TextSection from "../components/textSection";
-import Image from "../components/image";
-import PageHeader from "../components/pageheader";
-import urlBuild from "../imageBuilder";
+import Layout from '../components/layout';
+import groq from 'groq';
+import client from '../client';
+import TextSection from '../components/textSection';
+import Image from '../components/image';
+import PageHeader from '../components/pageheader';
+import urlBuild from '../imageBuilder';
 
 const Rent = (props) => {
   const navigationData = props.globalProps.navigation;
@@ -33,28 +33,45 @@ const Rent = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={rentTitle} text={rentText} />
-      <Image url={firstImage} alt={firstImageAlt} width="50%" />
+      <Image url={firstImage} alt={firstImageAlt} width='50%' />
       <TextSection
         title={requestTitle}
         text={requestText}
-        backgroundColor="#C05B3D"
-        textColor="#FFFFFF"
-        width="50"
-        align="center"
+        backgroundColor='#C05B3D'
+        textColor='#FFFFFF'
+        width='50'
+        align='center'
       />
-      <Image url={secondImage} alt={secondImageAlt} width="40%" />
-      <Image url={thirdImage} alt={thirdImageAlt} width="60%" />
-      <Image url={fourthImage} alt={fourthImageAlt} width="100%" />
+      <Image
+        url={secondImage}
+        alt={secondImageAlt}
+        width='45%'
+        paddingDesktop='10px 10px 0px 0px'
+        paddingMobile='0px 0px 10px 0px'
+      />
+      <Image
+        url={thirdImage}
+        alt={thirdImageAlt}
+        width='55%'
+        paddingDesktop='10px 0px 0px 0px'
+        paddingMobile='0px 0px 10px 0px'
+      />
+      <Image
+        url={fourthImage}
+        alt={fourthImageAlt}
+        width='100%'
+        paddingDesktop='10px 0px 10px 0px'
+      />
       <TextSection
         title={cateringTitle}
         text={cateringText}
-        link="/catering}"
-        linkType="arrow"
-        backgroundColor="#C05B3D"
-        textColor="#FFFFFF"
-        width="100"
-        height="280"
-        align="left"
+        link='/catering}'
+        linkType='arrow'
+        backgroundColor='#C05B3D'
+        textColor='#FFFFFF'
+        width='100'
+        height='280'
+        align='left'
       />
     </Layout>
   );

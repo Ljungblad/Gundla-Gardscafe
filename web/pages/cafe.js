@@ -42,9 +42,26 @@ const CafePage = (props) => {
         align='left'
         backgroundColor='#F3F1E7'
       />
-      <Image url={secondImg} alt={secondAltText} width='50%' />
-      <Image url={thirdImg} alt={thirdAltText} width='50%' />
-      <Image url={fourthImg} alt={fourthAltText} width='100%' />
+      <Image
+        url={secondImg}
+        alt={secondAltText}
+        width='45%'
+        paddingDesktop='10px 10px 0px 0px'
+        paddingMobile='0px 0px 10px 0px'
+      />
+      <Image
+        url={thirdImg}
+        alt={thirdAltText}
+        width='55%'
+        paddingDesktop='10px 0px 0px 0px'
+        paddingMobile='0px 0px 10px 0px'
+      />
+      <Image
+        url={fourthImg}
+        alt={fourthAltText}
+        width='100%'
+        paddingDesktop='10px 0px 0px 0px'
+      />
       <TextSection
         title={cateringTitle}
         text={cateringText}
