@@ -29,17 +29,36 @@ const Event = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader
-        title={eventPageData.titleEvent || "Page title"}
-        text={pageDesc || "Page description"}
+        title={eventPageData.titleEvent || 'Page title'}
+        text={pageDesc || 'Page description'}
       />
-      <Image url={firstImageUrl} alt={secondImageAlt} />
-      {events.map((event, i) => {
-        const title = event.eventTitle;
-        const eventInfo = event.textBlockHero[0].children[0].text;
-        return <TextSection key={i} title={title} text={eventInfo} />;
-      })}
-      <TextSection title={bookText} linkType="arrow" />
-      <Image url={secondImageUrl} alt={secondImageAlt} />
+      <Image url={firstImageUrl} alt={firstImageAlt} width='100' />
+      <section className='eventSection'>
+        {events.map((event, i) => {
+          const title = event.eventTitle;
+          const eventInfo = event.textBlockHero[0].children[0].text;
+          return (
+            <TextSection
+              key={i}
+              title={title}
+              text={eventInfo}
+              width='50'
+              backgroundColor='#F3F1E7'
+              align='center'
+              height='270'
+            />
+          );
+        })}
+      </section>
+      <TextSection
+        title={bookText}
+        linkType='arrow'
+        backgroundColor='#C05B3D'
+        width='100'
+        textColor='#fff'
+        align='left'
+      />
+      <Image url={secondImageUrl} alt={secondImageAlt} width='100' />
       <EventForm events={events} eventPageData={eventPageData} />
     </Layout>
   );
