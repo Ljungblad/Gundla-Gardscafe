@@ -1,68 +1,94 @@
 import styled from 'styled-components';
+import Input from '../components/forminput';
 
-const StyledForm = styled.form`
+const StyledFormSection = styled.section`
+  background: #242b18;
   display: flex;
   flex-direction: column;
-  background: #000;
-  color: #fff;
-  padding: 20px;
+  align-items: center;
 
-  .formTopText {
-    padding: 50px 0px;
-
-    h3 {
-      margin-bottom: 10px;
-    }
-  }
-
-  input,
-  textarea,
-  .buttons,
-  .formTopText {
-    width: 335px;
-  }
-
-  input {
-    margin-bottom: 30px;
-    height: 40px;
-    border-radius: 0px;
-    border: none;
-  }
-
-  label {
-    margin-bottom: 10px;
-  }
-
-  .eventList {
-    width: 235px;
-    overflow: hidden;
-  }
-  .ticketList {
-    width: 70px;
-    overflow: hidden;
-  }
-
-  textarea {
-    resize: none;
-    height: 150px;
-    border-radius: none;
-    border: none;
-  }
-  .buttons {
+  form {
     display: flex;
-    margin: 30px 0px 60px 0px;
-    justify-content: space-between;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
 
-    button {
-      width: 160px;
-      height: 40px;
-      border: none;
-      text-transform: uppercase;
+    .formTopText {
+      padding: 50px 0px;
+
+      h3 {
+        margin-bottom: 10px;
+      }
     }
-    .resetBtn {
-      color: #fff;
-      background: #000;
-      border: 1px solid #fff;
+
+    .inputStyleTextArea {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inputStyleTextArea,
+    .buttons,
+    .formTopText {
+      width: 330px;
+    }
+
+    textarea {
+      resize: none;
+      height: 150px;
+      border-radius: none;
+      border: none;
+      padding: 10px;
+      color: #000201;
+    }
+    .buttons {
+      display: flex;
+      margin: 30px 0px 60px 0px;
+      justify-content: space-between;
+
+      button {
+        width: 140px;
+        height: 45px;
+        border: none;
+      }
+      .resetBtn {
+        color: #fff;
+        background: transparent;
+        border: 1px solid #fff;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    background: #4c5340;
+    width: 100%;
+
+    form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 700px;
+      padding: 70px 0px 70px 0px;
+
+      .formTopText {
+        width: 100%;
+        padding: 0px 0px 15px 0px;
+      }
+
+      textarea {
+        color: #4c5340;
+      }
+
+      .inputStyleTextArea {
+        width: 100%;
+      }
+      .buttons {
+        width: 100%;
+        justify-content: flex-end;
+        margin: 30px 0px 0px 0px;
+
+        button:first-child {
+          margin-right: 55px;
+        }
+      }
     }
   }
 `;
@@ -72,33 +98,45 @@ const EventForm = ({ events, eventPageData }) => {
   const formInfo = eventPageData.textBlockForm[0].children[0].text;
 
   return (
-    <StyledForm action='https://formspree.io/xaylwjae' method='POST'>
-      <div className='formTopText'>
-        <h3>{formTitle}</h3>
-        <p>{formInfo}</p>
-      </div>
-      <label htmlFor='name'>Namn</label>
-      <input type='text' name='name' />
-      <label htmlFor='_replyto'>Mail</label>
-      <input type='mail' name='_replyto' />
-      <label htmlFor='event'>Vilket evenemang vill du anmäla dig till?</label>
-      <input className='eventList' list='eventsList' id='events' name='event' />
-      <datalist id='eventsList'>
-        {events.map((event, i) => {
-          return <option value={event.eventTitle} key={i} />;
-        })}
-      </datalist>
-      <label htmlFor='tickets'>Hur många biljetter vill du ha?</label>
-      <input className='ticketList' type='number' name='amount of tickets' />
-      <label>Meddelande</label>
-      <textarea name='message'></textarea>
-      <div className='buttons'>
-        <button className='resetBtn' type='button'>
-          Återställ
-        </button>
-        <button type='submit'>Skicka</button>
-      </div>
-    </StyledForm>
+    <StyledFormSection>
+      <form action='https://formspree.io/xaylwjae' method='POST'>
+        <div className='formTopText'>
+          <h3>{formTitle}</h3>
+          <p>{formInfo}</p>
+        </div>
+        <Input name='name' type='text' label='Namn' width='330' />
+        <Input name='_replyto' type='mail' label='Mail' width='330' />
+        <Input
+          name='event'
+          list='eventsList'
+          label='Vilket evenemang vill du anmäla dig till?'
+          id='events'
+          name='event'
+          width='245'
+        />
+        <datalist id='eventsList'>
+          {events.map((event, i) => {
+            return <option value={event.eventTitle} key={i} />;
+          })}
+        </datalist>
+        <Input
+          name='tickets'
+          type='number'
+          label='Hur många biljetter vill du ha?'
+          width='70'
+        />
+        <div className='inputStyleTextArea'>
+          <label>Meddelande</label>
+          <textarea name='message'></textarea>
+        </div>
+        <div className='buttons'>
+          <button className='resetBtn' type='button'>
+            Återställ
+          </button>
+          <button type='submit'>SKICKA</button>
+        </div>
+      </form>
+    </StyledFormSection>
   );
 };
 

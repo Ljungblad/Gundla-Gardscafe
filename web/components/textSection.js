@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledTextSection = styled.div`
   padding: 60px 24px 60px 24px;
@@ -21,7 +21,7 @@ const StyledTextSection = styled.div`
   .arrowLinkContainer {
     width: 100%;
     margin-top: 20px;
-    display: ${({ linkType }) => (linkType == "arrow" ? "block" : "none")};
+    display: ${({ linkType }) => (linkType == 'arrow' ? 'block' : 'none')};
   }
 
   .arrowLinkContainer a {
@@ -29,7 +29,7 @@ const StyledTextSection = styled.div`
   }
 
   .textLinkContainer {
-    display: ${({ linkType }) => (linkType == "text" ? "block" : "none")};
+    display: ${({ linkType }) => (linkType == 'text' ? 'block' : 'none')};
     margin-top: 20px;
     width: 100%;
   }
@@ -45,7 +45,7 @@ const StyledTextSection = styled.div`
     display: flex;
 
     ${(props) =>
-      props.align === "center" &&
+      props.align === 'center' &&
       `
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ const StyledTextSection = styled.div`
     `}
 
     ${(props) =>
-      props.align === "left" &&
+      props.align === 'left' &&
       `
     justify-content: flex-start;
     align-items: center;
@@ -77,13 +77,13 @@ const TextSection = (props) => {
       height={props.height}
       align={props.align}
     >
-      <div className="textContainer">
-        <h3>{props.title || "Title"}</h3>
-        <p>{props.text || "Text"}</p>
-        <div className="arrowLinkContainer">
+      <div className='textContainer'>
+        <h3>{props.title}</h3>
+        <p>{props.text}</p>
+        <div className='arrowLinkContainer'>
           <a href={props.link}>INSERT ICON HERE --></a>
         </div>
-        <div className="textLinkContainer">
+        <div className='textLinkContainer'>
           <a href={props.link}>
             <p>LÄS MER</p>
           </a>
