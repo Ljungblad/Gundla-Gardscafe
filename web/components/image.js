@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledImage = styled.div`
   height: 440px;
+  margin: ${(props) => props.marginDesktop};
 
   img {
     width: 100%;
@@ -10,14 +11,21 @@ const StyledImage = styled.div`
   }
 
   @media (min-width: 992px) {
-    width: ${(props) => props.width}%;
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    margin: ${(props) => props.marginMobile};
   }
 `;
 
 const Image = (props) => {
   return (
-    <StyledImage width={props.width}>
-      <img src={props.url} alt={props.alt || "image"} loading="lazy" />
+    <StyledImage
+      width={props.width}
+      height={props.height}
+      marginMobile={props.marginMobile}
+      marginDesktop={props.marginDesktop}
+    >
+      <img src={props.url} alt={props.alt || 'image'} loading='lazy' />
     </StyledImage>
   );
 };

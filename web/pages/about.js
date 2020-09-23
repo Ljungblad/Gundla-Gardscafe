@@ -31,11 +31,23 @@ const About = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageDesc} />
-      <Image url={firstImage} alt={firstImageAlt} />
-      <TextSection title={backgroundTitle} text={backgroundText} />
-      <Image url={secondImage} alt={secondImageAlt} />
-      <TextSection title={eventTitle} text={eventText} />
-      <TextSection title={welcomeTitle} text={welcomeText} />
+      <Image url={firstImage} alt={firstImageAlt} width='100%' />
+      <TextSection
+        title={backgroundTitle}
+        text={backgroundText}
+        width='100'
+        align='left'
+      />
+      <Image url={secondImage} alt={secondImageAlt} width='450px' height="450px" marginMobile="0px 0px 20px 100px"/>
+      <TextSection title={welcomeTitle} text={welcomeText} align="left"/>
+      <TextSection
+        title={eventTitle}
+        text={eventText}
+        width='100'
+        align='left'
+        backgroundColor='#C05B3D'
+        textColor='#FFF'
+      />
     </Layout>
   );
 };
