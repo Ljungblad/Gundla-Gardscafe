@@ -18,4 +18,4 @@
 
 ## Designers
 - Sofia Lahti
-- [Elin Larsson](Elin-larsson.com)
+- [Elin Larsson](elin-larsson.com)
