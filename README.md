@@ -15,3 +15,7 @@
 ## Developers
 - [Henric Björkvall](https://github.com/henricbjork)
 - [Victor Ljungblad](https://github.com/Ljungblad)
+
+## Designers
+- Sofia Lahti
+- Elin Larsson
