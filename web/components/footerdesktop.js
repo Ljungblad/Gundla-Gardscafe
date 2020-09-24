@@ -4,10 +4,9 @@ const StyledFooterDesktop = styled.footer`
   display: none;
 
   @media (min-width: 992px) {
-    height: 40%;
     display: block;
     background: #4c5340;
-    color: white;
+    color: #FFF;
     padding: 30px 30px 40px 30px;
 
     .footerOpeningHours {
@@ -49,7 +48,7 @@ const StyledFooterDesktop = styled.footer`
     }
 
     .footerLinks {
-      margin-top: 30px;
+      margin-top: 25px;
 
       width: 130px;
       display: flex;
