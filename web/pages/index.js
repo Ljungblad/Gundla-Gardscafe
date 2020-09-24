@@ -60,7 +60,12 @@ const Index = (props) => {
         textColor="#FFFFFF"
         backgroundColor="#242B18"
       />
-      <Image url={secondImg} alt={secondAltText} width="50%" />
+      <Image
+        url={secondImg}
+        alt={secondAltText}
+        width="50%"
+        paddingDesktop="10px 0px 0px 100px"
+      />
       <TextSection
         title={titleCafe}
         text={cafeTextBlock}
@@ -68,11 +73,16 @@ const Index = (props) => {
         linkType="text"
         backgroundColor="#FFFFFF"
         textColor="#000201"
-        width="50"
-        height="410"
+        width="50%"
+        height="410px"
         align="center"
       />
-      <Image url={thirdImg} alt={thirdAltText} width="100%" />
+      <Image
+        url={thirdImg}
+        alt={thirdAltText}
+        width="100%"
+        paddingDesktop="10px 0px 10px 0px"
+      />
       <TextSection
         title={titleFind}
         text={findTextBlock}
@@ -80,8 +90,8 @@ const Index = (props) => {
         linkType="text"
         backgroundColor="#F3F1E7"
         textColor="#000201"
-        width="50"
-        height="410"
+        width="50%"
+        height="410px"
         align="center"
       />
       <TextSection
@@ -91,19 +101,24 @@ const Index = (props) => {
         linkType="arrow"
         backgroundColor="#C05B3D"
         textColor="#FFFFFF"
-        width="50"
-        height="410"
+        width="50%"
+        height="410px"
         align="center"
       />
-      <Image url={fourthImg} alt={fourthAltText} width="50%" />
+      <Image
+        url={fourthImg}
+        alt={fourthAltText}
+        width="50%"
+        paddingDesktop="10px 0px 10px 100px"
+      />
       <TextSection
         title={titleEvent}
         text={eventTextBlock}
         link="/event"
         linkType="text"
-        backgroundColor="#F3F1E7"
+        backgroundColor="#FFFFFF"
         textColor="#000201"
-        width="50"
+        width="50%"
         align="center"
       />
       <TextSection
@@ -113,8 +128,8 @@ const Index = (props) => {
         linkType="arrow"
         backgroundColor="#C05B3D"
         textColor="#FFFFFF"
-        width="100"
-        height="280"
+        width="100%"
+        height="280px"
         align="left"
       />
       <InstagramFeed instagramData={instaGrid} />

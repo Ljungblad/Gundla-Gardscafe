@@ -1,10 +1,10 @@
-import Layout from '../components/layout';
-import groq from 'groq';
-import client from '../client';
-import TextSection from '../components/textSection';
-import Image from '../components/image';
-import PageHeader from '../components/pageheader';
-import urlBuild from '../imageBuilder';
+import Layout from "../components/layout";
+import groq from "groq";
+import client from "../client";
+import TextSection from "../components/textSection";
+import Image from "../components/image";
+import PageHeader from "../components/pageheader";
+import urlBuild from "../imageBuilder";
 
 const About = (props) => {
   // GLOBAL PROPS
@@ -31,22 +31,28 @@ const About = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={pageDesc} />
-      <Image url={firstImage} alt={firstImageAlt} width='100%' />
+      <Image url={firstImage} alt={firstImageAlt} width="100%" />
       <TextSection
         title={backgroundTitle}
         text={backgroundText}
-        width='100'
-        align='left'
+        width="100%"
+        align="left"
       />
-      <Image url={secondImage} alt={secondImageAlt} width='450px' height="450px" marginMobile="0px 0px 20px 100px"/>
-      <TextSection title={welcomeTitle} text={welcomeText} align="left"/>
+      <Image
+        url={secondImage}
+        alt={secondImageAlt}
+        width="450px"
+        height="450px"
+        marginMobile="0px 0px 20px 100px"
+      />
+      <TextSection title={welcomeTitle} text={welcomeText} align="left" />
       <TextSection
         title={eventTitle}
         text={eventText}
-        width='100'
-        align='left'
-        backgroundColor='#C05B3D'
-        textColor='#FFF'
+        width="100%"
+        align="left"
+        backgroundColor="#C05B3D"
+        textColor="#FFF"
       />
     </Layout>
   );

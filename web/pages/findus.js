@@ -43,27 +43,33 @@ const FindUsPage = (props) => {
         text={publicTransportText}
         backgroundColor="#FFFFFF"
         textColor="#000201"
-        width="100"
-        height="280"
+        width="100%"
+        height="auto"
         align="left"
+        paddingDesktop="50px 24px 10px 24px"
+        paddingMobile="60px 24px 10px 24px"
       />
       <TextSection
         title={bikeTitle}
         text={bikeText}
         backgroundColor="#FFFFFF"
         textColor="#000201"
-        width="100"
-        height="280"
+        width="100%"
+        height="auto"
         align="left"
+        paddingDesktop="20px 24px 10px 24px"
+        paddingMobile="30px 24px 10px 24px"
       />
       <TextSection
         title={parkingTitle}
         text={parkingText}
         backgroundColor="#FFFFFF"
         textColor="#000201"
-        width="100"
-        height="280"
+        width="100%"
+        height="auto"
         align="left"
+        paddingDesktop="20px 24px 20px 24px"
+        paddingMobile="30px 24px 40px 24px"
       />
       <Map />
       <SingleTextSection title={welcomeTitle} hideDesktop="true" />

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledTextSection = styled.div`
-  padding: 60px 24px 60px 24px;
+  padding: ${(props) => props.paddingMobile || "60px 24px 60px 24px"};
   background-color: ${(props) => props.backgroundColor};
 
   h3 {
@@ -56,8 +56,9 @@ const StyledTextSection = styled.div`
   }
 
   @media (min-width: 992px) {
-    width: ${(props) => props.width}%;
-    height: ${(props) => props.height}px;
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    padding: ${(props) => props.paddingDesktop || "60px 24px 60px 24px"};
     display: flex;
 
     p {
@@ -96,6 +97,8 @@ const TextSection = (props) => {
       width={props.width}
       height={props.height}
       align={props.align}
+      paddingDesktop={props.paddingDesktop}
+      paddingMobile={props.paddingMobile}
     >
       <div className="textContainer">
         <h3>{props.title}</h3>
