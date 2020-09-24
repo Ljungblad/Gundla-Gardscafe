@@ -114,12 +114,16 @@ const TextSection = (props) => {
         <p>{props.text}</p>
         <div className='arrowLinkContainer'>
           <a href={props.link}>
-            <img src='/arrow_right.png' loading='lazy'></img>
+            <img
+              src='/arrow_right.png'
+              loading='lazy'
+              alt=''
+            ></img>
           </a>
         </div>
         <div className='arrowDownContainer'>
           <a href={props.link}>
-            <img src='/arrow_down.png' loading='lazy'></img>
+            <img src='/arrow_down.png' loading='lazy' alt=''></img>
           </a>
         </div>
         <div className='textLinkContainer'>
