@@ -40,7 +40,7 @@ const StyledSideBar = styled.div`
 
   @media (min-width: 992px) {
     width: 260px;
-    height: 550px;
+    height: 490px;
     padding-left: 30px;
     position: relative;
 
@@ -53,7 +53,7 @@ const StyledSideBar = styled.div`
 
       a {
         font-size: 18px;
-        height: 55px;
+        height: 48px;
       }
     }
   }
