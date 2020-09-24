@@ -42,10 +42,10 @@ const Event = (props) => {
               key={i}
               title={title}
               text={eventInfo}
-              width="50"
+              width="50%"
               backgroundColor="#F3F1E7"
               align="center"
-              height="270"
+              height="270px"
             />
           );
         })}
@@ -54,7 +54,7 @@ const Event = (props) => {
         title={bookText}
         linkType="down"
         backgroundColor="#C05B3D"
-        width="100"
+        width="100%"
         textColor="#fff"
         align="left"
       />
