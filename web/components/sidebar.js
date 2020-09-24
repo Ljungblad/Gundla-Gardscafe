@@ -65,7 +65,7 @@ const SideBar = (props) => {
   return (
     <StyledSideBar open={props.open}>
       <a href='/'>
-        <img src='/logo2.png' className='sideBarLogo' />
+        <img src='/logo2.png' className='sideBarLogo' alt='logo' />
       </a>
       <div className='navigationLinks'>
         {navigationLinks.map((item, i) => (
