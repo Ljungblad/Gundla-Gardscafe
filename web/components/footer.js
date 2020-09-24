@@ -27,14 +27,15 @@ const StyledFooter = styled.footer`
   }
 
   .footerContactUs,
-  .footerLogo,
   .footerLinks {
     margin-top: 35px;
   }
 
+  .footerLogo {
+    margin-top: 45px;
+  }
   .footerLinks {
     margin-bottom: 10px;
-
     height: 50px;
     width: 130px;
     display: flex;

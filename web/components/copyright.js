@@ -10,6 +10,7 @@ const StyledCopyright = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+   
 
     p {
       color: white;

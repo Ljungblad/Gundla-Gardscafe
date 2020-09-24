@@ -22,6 +22,7 @@ const StyledTextSection = styled.div`
 
   a {
     color: ${(props) => props.textColor};
+    font-size: 18px;
 
     :hover {
       color: #4c5340;
@@ -66,6 +67,10 @@ const StyledTextSection = styled.div`
 
     p {
       line-height: 24px;
+    }
+
+    a {
+      font-size: 20px;
     }
 
     ${(props) =>
