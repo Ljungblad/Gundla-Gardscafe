@@ -32,6 +32,13 @@ const StyledFormSection = styled.section`
       width: 330px;
     }
 
+    label {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
     textarea {
       resize: none;
       height: 150px;
@@ -73,6 +80,10 @@ const StyledFormSection = styled.section`
         padding: 0px 0px 15px 0px;
       }
 
+      label {
+        font-weight: 400;
+        font-size: 18px;
+      }
       textarea {
         color: #4c5340;
       }
@@ -85,8 +96,21 @@ const StyledFormSection = styled.section`
         justify-content: flex-end;
         margin: 30px 0px 0px 0px;
 
+        button:hover {
+          cursor: pointer;
+
+          color: #fff;
+          background: transparent;
+          border: 1px solid #fff;
+        }
+
         button:first-child {
-          margin-right: 55px;
+          margin-right: 25px;
+
+          :hover {
+            color: #4c5340;
+            background: #fff;
+          }
         }
       }
     }
@@ -109,7 +133,7 @@ const EventForm = ({ events, eventPageData }) => {
         <Input
           name='event'
           list='eventsList'
-          label='Vilket evenemang vill du anmäla dig till?'
+          label='Välj evenemang'
           id='events'
           name='event'
           width='245'

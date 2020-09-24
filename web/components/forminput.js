@@ -3,11 +3,6 @@ import styled from 'styled-components';
 const StyledInput = styled.div`
   display: flex;
   flex-direction: column;
-  
-
-  label {
-    margin-bottom: 10px;
-  }
 
   input {
     width: ${(props) => props.width}px;
@@ -21,6 +16,7 @@ const StyledInput = styled.div`
 
   @media (min-width: 992px) {
     width: 50%;
+
     input {
       color: #4c5340;
     }

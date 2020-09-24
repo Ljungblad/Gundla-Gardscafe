@@ -46,17 +46,23 @@ const CateringPage = (props) => {
       <Image
         url={secondImg}
         alt={secondAltText}
-        width="40%"
-        paddingDesktop="10px 10px 10px 0px"
+        width='40%'
+        paddingDesktop='10px 10px 0px 0px'
+        paddingMobile='0px 0px 10px 0px'
       />
       <Image
         url={thirdImg}
         alt={thirdAltText}
-        width="60%"
-        paddingDesktop="10px 0px 10px 0px"
-        paddingMobile="10px 0px 10px 0px"
+        width='60%'
+        paddingDesktop='10px 0px 0px 0px'
+        paddingMobile='0px 0px 10px 0px'
       />
-      <Image url={fourthImg} alt={fourthAltText} width="100%" />
+      <Image
+        url={fourthImg}
+        alt={fourthAltText}
+        width='100%'
+        paddingDesktop='10px 0px 0px 0px'
+      />
       <TextSection
         title={titleRent}
         text={rentTextBlock}

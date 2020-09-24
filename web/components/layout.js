@@ -17,6 +17,7 @@ const StyledPageWrapper = styled.div`
       display: flex;
       flex-wrap: wrap;
       background: #f3f1e7;
+      padding: 100px 0px 100px 0px;
     }
   }
 `;
