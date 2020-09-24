@@ -11,7 +11,6 @@ const StyledNav = styled.nav`
   padding: 0 20px 0 20px;
   position: fixed;
 
-
   @media (min-width: 992px) {
     display: none;
   }
@@ -21,7 +20,7 @@ const Nav = (props) => {
   return (
     <StyledNav>
       <a href='/'>
-        <img src='/logo.svg' />
+        <img src='/logo.svg' alt='logo' />
       </a>
       <Burger navigationLinks={props.navigationLinks} />
     </StyledNav>
