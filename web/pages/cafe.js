@@ -1,10 +1,10 @@
-import groq from 'groq';
-import client from '../client';
-import urlBuild from '../imageBuilder';
-import Layout from '../components/layout';
-import PageHeader from '../components/pageheader';
-import TextSection from '../components/textSection';
-import Image from '../components/image';
+import groq from "groq";
+import client from "../client";
+import urlBuild from "../imageBuilder";
+import Layout from "../components/layout";
+import PageHeader from "../components/pageheader";
+import TextSection from "../components/textSection";
+import Image from "../components/image";
 
 const CafePage = (props) => {
   //GLOBAL PROPS
@@ -34,43 +34,43 @@ const CafePage = (props) => {
   return (
     <Layout navigationLinks={navigationData} footerData={footerData}>
       <PageHeader title={pageTitle} text={headerTextBlock} />
-      <Image url={headerImg} alt={headerAltText} width='50%' />
+      <Image url={headerImg} alt={headerAltText} width="50%" />
       <TextSection
         title={menuTitle}
         text={menuText}
-        width='50'
-        align='left'
-        backgroundColor='#F3F1E7'
+        width="50%"
+        align="left"
+        backgroundColor="#F3F1E7"
       />
       <Image
         url={secondImg}
         alt={secondAltText}
-        width='45%'
-        paddingDesktop='10px 10px 0px 0px'
-        paddingMobile='0px 0px 10px 0px'
+        width="45%"
+        paddingDesktop="10px 10px 0px 0px"
+        paddingMobile="0px 0px 10px 0px"
       />
       <Image
         url={thirdImg}
         alt={thirdAltText}
-        width='55%'
-        paddingDesktop='10px 0px 0px 0px'
-        paddingMobile='0px 0px 10px 0px'
+        width="55%"
+        paddingDesktop="10px 0px 0px 0px"
+        paddingMobile="0px 0px 10px 0px"
       />
       <Image
         url={fourthImg}
         alt={fourthAltText}
-        width='100%'
-        paddingDesktop='10px 0px 0px 0px'
+        width="100%"
+        paddingDesktop="10px 0px 0px 0px"
       />
       <TextSection
         title={cateringTitle}
         text={cateringText}
-        link='/catering'
-        textColor='#FFF'
-        align='left'
-        linkType='arrow'
-        backgroundColor='#C05B3D'
-        width='100'
+        link="/catering"
+        textColor="#FFF"
+        align="left"
+        linkType="arrow"
+        backgroundColor="#C05B3D"
+        width="100%"
       />
     </Layout>
   );

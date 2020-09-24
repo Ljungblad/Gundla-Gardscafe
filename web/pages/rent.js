@@ -38,7 +38,7 @@ const Rent = (props) => {
         text={requestText}
         backgroundColor="#C05B3D"
         textColor="#FFFFFF"
-        width="50"
+        width="50%"
         align="center"
       />
       <Image
@@ -68,8 +68,8 @@ const Rent = (props) => {
         linkType="arrow"
         backgroundColor="#C05B3D"
         textColor="#FFFFFF"
-        width="100"
-        height="280"
+        width="100%"
+        height="280px"
         align="left"
       />
     </Layout>
