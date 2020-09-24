@@ -92,17 +92,17 @@ const Footer = (props) => {
       </div>
       <div className='footerBottomSection'>
         <div className='footerLogo'>
-          <img src='/logo2.png' loading='lazy' />
+          <img src='/logo2.png' loading='lazy' alt='logo' />
         </div>
         <div className='footerLinks'>
           <a href={footerData.facebookUrl}>
-            <img src='/facebookIcon.png' loading='lazy' />
+            <img src='/facebookIcon.png' loading='lazy' alt='facebook icon' />
           </a>
           <a href={footerData.instagramkUrl}>
-            <img src='/instagramIcon.png' loading='lazy' />
+            <img src='/instagramIcon.png' loading='lazy' alt='instagram icon' />
           </a>
           <a href={`mailto:${footerData.email}`}>
-            <img src='/mailIcon.png' loading='lazy' />
+            <img src='/mailIcon.png' loading='lazy' alt='mail icon' />
           </a>
         </div>
         <div className='footerCopyRight'>
