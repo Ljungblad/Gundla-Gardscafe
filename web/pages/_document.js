@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html>
+      <Html lang='sv'>
         <Head>
           <link
             href='https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;500;700&display=swap'
