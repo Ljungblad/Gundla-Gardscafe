@@ -97,13 +97,13 @@ const FooterDesktop = (props) => {
       <div className='footerBottomSection'>
         <div className='footerLinks'>
           <a href={footerData.facebookUrl}>
-            <img src='/facebookIcon.png' />
+            <img src='/facebookIcon.png' loading='lazy' />
           </a>
           <a href={footerData.instagramkUrl}>
-            <img src='/instagramIcon.png' />
+            <img src='/instagramIcon.png' loading='lazy' />
           </a>
           <a href={`mailto:${footerData.email}`}>
-            <img src='/mailIcon.png' />
+            <img src='/mailIcon.png' loading='lazy' />
           </a>
         </div>
       </div>
