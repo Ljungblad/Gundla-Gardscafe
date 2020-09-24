@@ -32,6 +32,7 @@ const Input = (props) => {
         name={props.name}
         list={props.list}
         id={props.id}
+        required
       />
     </StyledInput>
   );
