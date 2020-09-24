@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledTextSection = styled.div`
   padding: 60px 24px 60px 24px;
@@ -22,12 +22,16 @@ const StyledTextSection = styled.div`
 
   a {
     color: ${(props) => props.textColor};
+
+    :hover {
+      color: #4c5340;
+    }
   }
 
   .arrowLinkContainer {
     width: 100%;
     margin-top: 20px;
-    display: ${({ linkType }) => (linkType == "arrow" ? "block" : "none")};
+    display: ${({ linkType }) => (linkType == 'arrow' ? 'block' : 'none')};
 
     img {
       height: 18px;
@@ -37,7 +41,7 @@ const StyledTextSection = styled.div`
   .arrowDownContainer {
     width: 100%;
     margin-top: 20px;
-    display: ${({ linkType }) => (linkType == "down" ? "block" : "none")};
+    display: ${({ linkType }) => (linkType == 'down' ? 'block' : 'none')};
 
     img {
       height: 18px;
@@ -45,7 +49,7 @@ const StyledTextSection = styled.div`
   }
 
   .textLinkContainer {
-    display: ${({ linkType }) => (linkType == "text" ? "block" : "none")};
+    display: ${({ linkType }) => (linkType == 'text' ? 'block' : 'none')};
     margin-top: 20px;
     width: 100%;
 
@@ -65,7 +69,7 @@ const StyledTextSection = styled.div`
     }
 
     ${(props) =>
-      props.align === "center" &&
+      props.align === 'center' &&
       `
     justify-content: center;
     align-items: center;
@@ -75,7 +79,7 @@ const StyledTextSection = styled.div`
     `}
 
     ${(props) =>
-      props.align === "left" &&
+      props.align === 'left' &&
       `
     justify-content: flex-start;
     align-items: center;
@@ -97,23 +101,21 @@ const TextSection = (props) => {
       height={props.height}
       align={props.align}
     >
-      <div className="textContainer">
+      <div className='textContainer'>
         <h3>{props.title}</h3>
         <p>{props.text}</p>
-        <div className="arrowLinkContainer">
+        <div className='arrowLinkContainer'>
           <a href={props.link}>
-            <img src="/arrow_right.png" loading="lazy"></img>
+            <img src='/arrow_right.png' loading='lazy'></img>
           </a>
         </div>
-        <div className="arrowDownContainer">
+        <div className='arrowDownContainer'>
           <a href={props.link}>
-            <img src="/arrow_down.png" loading="lazy"></img>
+            <img src='/arrow_down.png' loading='lazy'></img>
           </a>
         </div>
-        <div className="textLinkContainer">
-          <a href={props.link}>
-            <p>LÄS MER</p>
-          </a>
+        <div className='textLinkContainer'>
+          <a href={props.link}>LÄS MER</a>
         </div>
       </div>
     </StyledTextSection>

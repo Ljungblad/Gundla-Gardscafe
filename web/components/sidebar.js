@@ -29,7 +29,12 @@ const StyledSideBar = styled.div`
       display: flex;
       align-items: center;
       text-decoration: none;
-      color: #000;
+      color: #000201;
+      width: 50%;
+
+      :hover {
+        color: #fff;
+      }
     }
   }
 
