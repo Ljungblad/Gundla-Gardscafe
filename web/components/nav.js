@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Burger from "../components/hamburger";
+import styled from 'styled-components';
+import Burger from '../components/hamburger';
 
 const StyledNav = styled.nav`
   height: 61px;
@@ -11,6 +11,7 @@ const StyledNav = styled.nav`
   padding: 0 20px 0 20px;
   position: fixed;
 
+
   @media (min-width: 992px) {
     display: none;
   }
@@ -19,8 +20,8 @@ const StyledNav = styled.nav`
 const Nav = (props) => {
   return (
     <StyledNav>
-      <a href="/">
-        <img src="/logo.svg" />
+      <a href='/'>
+        <img src='/logo.svg' />
       </a>
       <Burger navigationLinks={props.navigationLinks} />
     </StyledNav>
