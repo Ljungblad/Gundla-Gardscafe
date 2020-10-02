@@ -6,11 +6,11 @@ on: [push, pull-request]
 jobs:
   prettier:
     runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-    with: 
-      node-version: 14
+    steps:
+     - uses: actions/checkout@v2
+     - uses: actions/setup-node@v1
+       with:
+        node-version: 14
     - run: npm install
     - run: npm test
  
