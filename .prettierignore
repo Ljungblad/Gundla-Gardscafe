@@ -1,0 +1,12 @@
+.DS_Store
+.vs_code
+node_modules
+web/.next
+web/public
+web/.babelrc
+web/package-lock.json
+web/package.json
+studio
+README.md
+package-lock.json
+package.json

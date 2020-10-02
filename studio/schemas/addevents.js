@@ -1,27 +1,27 @@
 export default {
-  name: 'addEvents',
-  type: 'document',
-  title: 'Lägg till evenemang',
+  name: "addEvents",
+  type: "document",
+  title: "Lägg till evenemang",
   fields: [
     {
-      name: 'eventTitle',
-      type: 'string',
-      title: 'Rubrik Evenemang',
+      name: "eventTitle",
+      type: "string",
+      title: "Rubrik Evenemang",
     },
     {
-      name: 'textBlockHero',
-      type: 'array',
-      title: 'Beskrivning av evenemang',
+      name: "textBlockHero",
+      type: "array",
+      title: "Beskrivning av evenemang",
       of: [
         {
-          type: 'block',
+          type: "block",
         },
       ],
     },
     {
-      name: 'email',
-      type: 'string',
-      title: 'Email för kontakt',
+      name: "email",
+      type: "string",
+      title: "Email för kontakt",
     },
   ],
 };

@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -29,11 +29,11 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html lang='sv'>
+      <Html lang="sv">
         <Head>
           <link
-            href='https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;500;700&display=swap'
-            rel='stylesheet'
+            href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;500;700&display=swap"
+            rel="stylesheet"
           />
         </Head>
         <body>
