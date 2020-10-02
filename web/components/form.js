@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import Input from '../components/forminput';
+import styled from "styled-components";
+import Input from "../components/forminput";
 
 const StyledFormSection = styled.section`
   background: #242b18;
@@ -33,7 +33,7 @@ const StyledFormSection = styled.section`
     }
 
     label {
-      font-family: 'Barlow', sans-serif;
+      font-family: "Barlow", sans-serif;
       font-weight: 400;
       font-size: 16px;
       margin-bottom: 10px;
@@ -123,41 +123,41 @@ const EventForm = ({ events, eventPageData }) => {
 
   return (
     <StyledFormSection>
-      <form action='https://formspree.io/xaylwjae' method='POST'>
-        <div className='formTopText'>
+      <form action="https://formspree.io/xaylwjae" method="POST">
+        <div className="formTopText">
           <h3>{formTitle}</h3>
           <p>{formInfo}</p>
         </div>
-        <Input name='name' type='text' label='Namn' width='330' />
-        <Input name='_replyto' type='mail' label='Mail' width='330' />
+        <Input name="name" type="text" label="Namn" width="330" />
+        <Input name="_replyto" type="mail" label="Mail" width="330" />
         <Input
-          name='event'
-          list='eventsList'
-          label='Välj evenemang'
-          id='events'
-          name='event'
-          width='245'
+          name="event"
+          list="eventsList"
+          label="Välj evenemang"
+          id="events"
+          name="event"
+          width="245"
         />
-        <datalist id='eventsList'>
+        <datalist id="eventsList">
           {events.map((event, i) => {
             return <option value={event.eventTitle} key={i} />;
           })}
         </datalist>
         <Input
-          name='tickets'
-          type='number'
-          label='Hur många biljetter vill du ha?'
-          width='70'
+          name="tickets"
+          type="number"
+          label="Hur många biljetter vill du ha?"
+          width="70"
         />
-        <div className='inputStyleTextArea'>
+        <div className="inputStyleTextArea">
           <label>Meddelande</label>
-          <textarea name='message'></textarea>
+          <textarea name="message"></textarea>
         </div>
-        <div className='buttons'>
-          <button className='resetBtn' type='button'>
+        <div className="buttons">
+          <button className="resetBtn" type="button">
             Återställ
           </button>
-          <button type='submit'>SKICKA</button>
+          <button type="submit">SKICKA</button>
         </div>
       </form>
     </StyledFormSection>

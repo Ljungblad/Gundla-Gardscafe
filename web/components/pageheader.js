@@ -18,7 +18,6 @@ const StyledPageHeader = styled.div`
     width: 100%;
     padding: 100px 24px 100px 115px;
     letter-spacing: 1px;
-    
 
     h1 {
       letter-spacing: 1px;

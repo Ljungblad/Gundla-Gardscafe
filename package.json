@@ -1,0 +1,23 @@
+{
+  "name": "gundla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henricbjork/Gundla-Gardscafe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henricbjork/Gundla-Gardscafe/issues"
+  },
+  "homepage": "https://github.com/henricbjork/Gundla-Gardscafe#readme"
+}

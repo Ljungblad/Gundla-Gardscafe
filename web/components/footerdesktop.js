@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledFooterDesktop = styled.footer`
   display: none;
@@ -79,31 +79,31 @@ const FooterDesktop = (props) => {
 
   return (
     <StyledFooterDesktop>
-      <div className='footerOpeningHours'>
+      <div className="footerOpeningHours">
         <h3>{openingHoursTitle}</h3>
-        <div className='openingHoursWeekDay'>
+        <div className="openingHoursWeekDay">
           <p>{weekDayTitle}</p>
           <p>{weekDayHours}</p>
         </div>
-        <div className='openingHoursWeekend'>
+        <div className="openingHoursWeekend">
           <p>{weekendTitle}</p>
           <p>{weekendHours}</p>
         </div>
       </div>
-      <div className='footerAdress'>
+      <div className="footerAdress">
         <h3>{addressTitle}</h3>
         <p>{address}</p>
       </div>
-      <div className='footerBottomSection'>
-        <div className='footerLinks'>
+      <div className="footerBottomSection">
+        <div className="footerLinks">
           <a href={footerData.facebookUrl}>
-            <img src='/facebookIcon.png' loading='lazy' alt='facebook icon' />
+            <img src="/facebookIcon.png" loading="lazy" alt="facebook icon" />
           </a>
           <a href={footerData.instagramkUrl}>
-            <img src='/instagramIcon.png' loading='lazy' alt='instagram icon' />
+            <img src="/instagramIcon.png" loading="lazy" alt="instagram icon" />
           </a>
           <a href={`mailto:${footerData.email}`}>
-            <img src='/mailIcon.png' loading='lazy' alt='mail icon' />
+            <img src="/mailIcon.png" loading="lazy" alt="mail icon" />
           </a>
         </div>
       </div>

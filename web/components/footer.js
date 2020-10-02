@@ -70,42 +70,42 @@ const Footer = (props) => {
   const contactTitle = footerData.textBlockContact[0].children[0].text;
 
   return (
-    <StyledFooter id='openingHours'>
-      <div className='footerOpeningHours'>
+    <StyledFooter id="openingHours">
+      <div className="footerOpeningHours">
         <h3>{openingHoursTitle}</h3>
-        <div className='openingHoursWeekDay'>
+        <div className="openingHoursWeekDay">
           <p>{weekDayTitle}</p>
           <p>{weekDayHours}</p>
         </div>
-        <div className='openingHoursWeekend'>
+        <div className="openingHoursWeekend">
           <p>{weekendTitle}</p>
           <p>{weekendHours}</p>
         </div>
       </div>
-      <div className='footerAdress'>
+      <div className="footerAdress">
         <h3>{addressTitle}</h3>
         <p>{address}</p>
       </div>
-      <div className='footerContactUs'>
+      <div className="footerContactUs">
         <h3>{contactTitle}</h3>
         <p>{footerData.email}</p>
       </div>
-      <div className='footerBottomSection'>
-        <div className='footerLogo'>
-          <img src='/logo2.png' loading='lazy' alt='logo' />
+      <div className="footerBottomSection">
+        <div className="footerLogo">
+          <img src="/logo2.png" loading="lazy" alt="logo" />
         </div>
-        <div className='footerLinks'>
+        <div className="footerLinks">
           <a href={footerData.facebookUrl}>
-            <img src='/facebookIcon.png' loading='lazy' alt='facebook icon' />
+            <img src="/facebookIcon.png" loading="lazy" alt="facebook icon" />
           </a>
           <a href={footerData.instagramkUrl}>
-            <img src='/instagramIcon.png' loading='lazy' alt='instagram icon' />
+            <img src="/instagramIcon.png" loading="lazy" alt="instagram icon" />
           </a>
           <a href={`mailto:${footerData.email}`}>
-            <img src='/mailIcon.png' loading='lazy' alt='mail icon' />
+            <img src="/mailIcon.png" loading="lazy" alt="mail icon" />
           </a>
         </div>
-        <div className='footerCopyRight'>
+        <div className="footerCopyRight">
           <p>
             {footerData.copyrightText} {currentYear}
           </p>
